@@ -1,0 +1,11 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "Home": {
+    "welcome": "Welcome to my Portfolio",
+    "description": "I'm a software developer"
+  }
+}
