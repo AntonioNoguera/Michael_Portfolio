@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "allowArbitraryExtensions": true,
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,13 +19,10 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@Components/*": ["./src/app/components/*"],
-      "@messages/*" : ["./src/messages/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "middleware.js"], 
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

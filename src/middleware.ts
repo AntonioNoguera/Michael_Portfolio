@@ -1,24 +1,11 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import createMiddleware from 'next-intl/middleware';
+import {routing} from './i18n/routing';
 
-export function middleware(request: NextRequest) {
-  // Obtener la ruta actual y el idioma
-  const pathname = request.nextUrl.pathname
-  const pathnameIsMissingLocale = ['en', 'es'].every(
-    (locale) => !pathname.startsWith(`/${locale}`) && pathname !== `/${locale}`
-  )
-
-  // Si falta el locale, redirigir al locale por defecto
-  if (pathnameIsMissingLocale) {
-    const locale = 'es' // Locale por defecto
-    return NextResponse.redirect(
-      new URL(`/${locale}${pathname}`, request.url)
-    )
-  }
-}
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: [
-    '/((?!api|_next/static|_next/).*)',
-  ],
-}
+  // Match all pathnames except for
+  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
+  // - … the ones containing a dot (e.g. `favicon.ico`)
+  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)'
+};
