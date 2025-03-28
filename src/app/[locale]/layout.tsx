@@ -20,9 +20,13 @@ export default async function LocaleLayout({children, params}: Props) {
   // Enable static rendering
   setRequestLocale(locale);
 
-  return ( 
+  return (
+    <html className="h-full" lang={locale}>
+      <body>
         <NextIntlClientProvider> 
           {children}
-        </NextIntlClientProvider> 
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
