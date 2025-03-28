@@ -1,13 +1,15 @@
-import Link from "next/link";
+import {ReactNode} from 'react';
 
-import "../styles/styles.css";
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="es">
-      <body className="relative min-h-screen">
-        <main>{children}</main>
-      </body>
-    </html>
-  );
-}
+type Props = {
+  children: ReactNode;
+};
+ 
+export default function RootLayout({ children }: { children: ReactNode }) {
+    return (
+      <html className="h-full">
+        <body>
+          {children}
+        </body>
+      </html>
+    );
+  }
