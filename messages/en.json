@@ -1,6 +1,23 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    }
+  "Title": {
+    "title_name": "Portafolio Michael"
+  },
+  "Commons": {},
+  "Navbar": {
+    "dev_name": "Michael Noguera",
+    "about_me": "About Me",
+    "mobile_section": "Mobile Development",
+    "web_section": "Wev Development",
+    "contact_me": "Contact Me"
+  },
+  "About_Me_Section": {
+    "description": "Lorem ipsum",
+    "vocational_training_title": "Vocational Training",
+    "tecnitian": "Computer Programming Technician",
+    "engineer": "Software Technology Engineer",
+    "professional_experiencie_title": "Professional Experience",
+    "enviaflores_name": "enviaflores.com",
+    "android_intern": "Android Intern",
+    "ios_developer": "iOS Developer"
   }
+}
