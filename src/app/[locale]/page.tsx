@@ -1,6 +1,7 @@
 import {useTranslations} from 'next-intl';
 
 import {Link} from '@i18n/navigation'; 
+import Footer from '@/components/Footer';
 
 export default function HomePage() {
   //onst t = useTranslations('HomePage');
@@ -20,7 +21,9 @@ export default function HomePage() {
       <section id="contact" className="min-h-screen p-8 bg-gray-50">
         <h2 className="text-3xl font-semibold mb-4">Contacto</h2>
         <p>Contenido de la sección Contacto...</p>
+         
       </section>
+      <Footer/>
     </>
   )
 }
