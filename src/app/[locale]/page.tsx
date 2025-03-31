@@ -1,29 +1,31 @@
-import {useTranslations} from 'next-intl';
-
-import {Link} from '@i18n/navigation'; 
+import { useTranslations } from 'next-intl';
+import { Link } from '@i18n/navigation';
 import Footer from '@/components/Footer';
 
 export default function HomePage() {
-  //onst t = useTranslations('HomePage');
+  const t = useTranslations('HomePage');
 
   return (
     <>
-      <section id="about" className="min-h-screen p-8 bg-gray-50">
-        <h2 className="text-3xl font-semibold mb-4">Sobre mí</h2>
-        <p>Contenido de la sección Sobre mí...</p>
+      <section id="about" className="h-[calc(100vh-62px)] p-8">
+        <h2 className="text-3xl font-semibold mb-4">{t('about_title')}</h2>
+        <p>{t('about_content')}</p>
       </section>
 
-      <section id="projects" className="min-h-screen p-8 bg-white">
-        <h2 className="text-3xl font-semibold mb-4">Proyectos</h2>
-        <p>Contenido de la sección Proyectos...</p>
+      <section id="projects" className="h-[calc(100vh-62px)] p-8">
+        <h2 className="text-3xl font-semibold mb-4">{t('projects_title')}</h2>
+        <p>{t('projects_content')}</p>
       </section>
 
-      <section id="contact" className="min-h-screen p-8 bg-gray-50">
-        <h2 className="text-3xl font-semibold mb-4">Contacto</h2>
-        <p>Contenido de la sección Contacto...</p>
-         
+      <section id="contact" className="h-[calc(100vh-62px)] pt-20 flex flex-col">
+        <div className="flex-grow">
+          <h2 className="text-3xl font-semibold mb-4">{t('contact_title')}</h2>
+          <p>{t('contact_content')}</p>
+        </div>
+        <div className="mt-auto">
+          <Footer />
+        </div>
       </section>
-      <Footer/>
     </>
   )
 }

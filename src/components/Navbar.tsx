@@ -12,7 +12,7 @@ export default function Navbar() {
   const t = useTranslations('Navbar');
 
   return (
-    <nav className="fixed top-0 w-full bg-primary shadow z-50 text-white_primary">
+    <nav className="fixed top-0 w-full bg-primary shadow text-white_primary">
       <div className=" px-4 py-4 flex justify-between items-center">
       
       <div className='flex space-x-4'>
@@ -25,8 +25,7 @@ export default function Navbar() {
 
         <h1 className="text-xl font-bold">{t('dev_name')}</h1>
 
-      </div>
-      
+      </div> 
 
         <div className="space-x-8">
           <a href="#about" className="hover:text-black">{t('about_me')}</a>

@@ -24,6 +24,15 @@
     "enviaflores_name": "enviaflores.com",
     "android_intern": "Practicante de Android",
     "ios_developer": "Desarrollador de iOS"
+  },
+
+  "HomePage": {
+    "about_title": "About Me",
+    "about_content": "Content about me...",
+    "projects_title": "Projects",
+    "projects_content": "Projects content...",
+    "contact_title": "Contact",
+    "contact_content": "Contact information..."
   }
 
 }
