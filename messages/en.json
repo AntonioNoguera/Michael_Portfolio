@@ -2,7 +2,9 @@
   "Title": {
     "title_name": "Portafolio Michael"
   },
-  "Commons": {},
+  "Commons": {
+    "name": "Michael Noguera"
+  },
   "Navbar": {
     "dev_name": "Michael Noguera",
     "about_me": "About Me",
@@ -11,13 +13,15 @@
     "contact_me": "Contact Me"
   },
   "About_Me_Section": {
-    "description": "Lorem ipsum",
+    "description": "Hi, I'm Michael Noguera, a software engineer passionate about creating solutions that connect design and functionality. I love mobile development and I'm always looking to learn new things.",
     "vocational_training_title": "Vocational Training",
     "tecnitian": "Computer Programming Technician",
     "engineer": "Software Technology Engineer",
     "professional_experiencie_title": "Professional Experience",
     "enviaflores_name": "enviaflores.com",
     "android_intern": "Android Intern",
-    "ios_developer": "iOS Developer"
+    "ios_developer": "iOS Developer",
+    "internship_period": "Nov 24 - March 25",
+    "fulltime_period": "Mar 25 - Present"
   }
 }

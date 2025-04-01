@@ -36,13 +36,11 @@ export default async function LocaleLayout({ children, params }: Props) {
         <title>Michael Portfolio</title>
       </head>
       <body className={`${raleway.variable} font-sans`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="min-h-screen flex flex-col">
+        <NextIntlClientProvider locale={locale} messages={messages}> 
             <Navbar />
-            <main className="flex-1 bg-gray-100 pt-16">
+            <main className="flex-1 bg-gray-100">
               {children}
-            </main>
-          </div>
+            </main> 
         </NextIntlClientProvider>
       </body>
     </html>

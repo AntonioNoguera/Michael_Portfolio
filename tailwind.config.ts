@@ -15,7 +15,15 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-raleway)', 'sans-serif'],
-      }
+      },
+      boxShadow: {
+        'std': '0 4px 30px 5px rgba(0, 0, 0, 0.25)',
+      },
+      fontSize: { 
+        'body': ['1.20rem'],
+        'h2': ['1.95rem'],
+        'huge': ['3rem', { lineHeight: '1rem' }],
+      },
     },
   },
   plugins: [],

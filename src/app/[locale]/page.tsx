@@ -1,26 +1,28 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@i18n/navigation';
 import Footer from '@/components/Footer';
+import AboutMe from './sections/about_me';
 
-export default function HomePage() {
-  const t = useTranslations('HomePage');
+export default function HomePage() { 
 
   return (
     <>
-      <section id="about" className="h-[calc(100vh-62px)] p-8">
-        <h2 className="text-3xl font-semibold mb-4">{t('about_title')}</h2>
-        <p>{t('about_content')}</p>
+      <AboutMe/>
+
+      <section id="mobile" className="h-screen bg-black_primary pt-20">
+        <h2 className="text-3xl font-semibold mb-4">projects_title</h2>
+        <p>projects_content</p>
       </section>
 
-      <section id="projects" className="h-[calc(100vh-62px)] p-8">
-        <h2 className="text-3xl font-semibold mb-4">{t('projects_title')}</h2>
-        <p>{t('projects_content')}</p>
+      <section id="web" className="h-screen bg-gray pt-20">
+        <h2 className="text-3xl font-semibold mb-4">projects_title</h2>
+        <p>projects_content</p>
       </section>
 
-      <section id="contact" className="h-[calc(100vh-62px)] pt-20 flex flex-col">
+      <section id="contact" className="h-screen  flex flex-col pt-20">
         <div className="flex-grow">
-          <h2 className="text-3xl font-semibold mb-4">{t('contact_title')}</h2>
-          <p>{t('contact_content')}</p>
+          <h2 className="text-3xl font-semibold mb-4">contact_title</h2>
+          <p>contact_content</p>
         </div>
         <div className="mt-auto">
           <Footer />
