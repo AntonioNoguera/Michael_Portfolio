@@ -25,7 +25,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 opacity-90 w-full bg-primary shadow text-white_primary">
+    <nav className="fixed top-0 z-10 opacity-90 w-full bg-primary shadow text-white_primary">
       <div className="px-4 py-4 flex justify-between items-center">
 
         <div className='flex space-x-4'>
@@ -53,7 +53,7 @@ export default function Navbar() {
           >
 
             <Image
-              src={locale === 'es' ? spanish_flag : english_flag}
+              src={locale === 'es' ? english_flag : spanish_flag}
               alt="Una descripción de la imagen"
               width={30}
               height={30}

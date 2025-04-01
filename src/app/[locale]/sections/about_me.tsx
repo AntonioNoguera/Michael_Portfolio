@@ -42,7 +42,7 @@ export default function AboutMe() {
 
                         <div className='flex space-x-4 w-full'>
                             <div className="flex-1 py-4 p|x-6 justify-center items-center bg-white_primary shadow-std rounded-xl">
-                                <p className='text-body'>{t('tecnitian')}</p>
+                                <p className='text-body mb-2'>{t('tecnitian')}</p>
                                 <div className="flex  w-full items-center ">
                                     <div className="flex flex-1 justify-center items-center">
                                         <Image
@@ -62,7 +62,8 @@ export default function AboutMe() {
                             </div>
 
                             <div className="flex-1 py-4 px-6 justify-center items-center bg-white_primary shadow-std rounded-xl">
-                                <p className='text-body'>{t('engineer')}</p>
+                                <p className='text-body mb-2'>{t('engineer')}</p>
+
                                 <div className="flex w-full items-center">
                                     <div className="flex flex-1 justify-center items-center">
                                         <Image

@@ -21,8 +21,9 @@ module.exports = {
       },
       fontSize: { 
         'body': ['1.20rem'],
+        'body1':  ['1.70rem'],
         'h2': ['1.95rem'],
-        'huge': ['3rem', { lineHeight: '1rem' }],
+        'huge': ['10rem', { lineHeight: '9rem' }],
       },
     },
   },

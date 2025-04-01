@@ -3,9 +3,44 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
-  }
+   scroll-behavior: smooth;
+}
 
- *{
-    user-select: none;
- }
+* {
+   user-select: none;
+}
+
+.mobile-header {
+   background: #33595E;
+   background: linear-gradient(to right, #33595E 28%, #6ABAC4 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.kotlin-header {
+   background: #C757BB;
+   background: linear-gradient(to right, #C757BB 0%, #F88909 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.swift-header {
+   background: #F15034;
+   background: linear-gradient(to right, #F15034 0%, #F9A941 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.dart-header {
+   background: #33595E;
+   background: linear-gradient(to right, #33595E 0%, #6ABAC4 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.ionic-header {
+   background: #478AFF;
+   background: linear-gradient(to right, #478AFF 0%, #67D4FF 79%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; 
+}
