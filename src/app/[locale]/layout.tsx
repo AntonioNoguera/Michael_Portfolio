@@ -36,33 +36,30 @@ export default async function LocaleLayout({ children, params }: Props) {
         <title>Michael Portfolio</title>
       </head>
       <body className={`${raleway.variable} font-sans`}>
-
-      <div className="absolute top-0 left-0 w-full h-screen overflow-hidden z-[-10]">
-
-<video
-  className="w-full h-full object-cover"
-  autoPlay
-  loop
-  muted
-  playsInline
->
-  <source src="/mp4/pattern.mp4" type="video/mp4" />
-  Tu navegador no soporta el video.
-</video>
-</div>
+ 
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
 
-           
+          <div className="absolute top-0 left-0 w-full h-screen overflow-hidden z-[-10]">
+
+            <video
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/mp4/pattern.mp4" type="video/mp4" />
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+          <Navbar />
 
           <main className="flex-1">
             {children}
           </main>
-
-          
+ 
         </NextIntlClientProvider>
-
-        
+ 
       </body>
     </html>
   );
