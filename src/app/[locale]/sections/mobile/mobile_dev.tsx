@@ -20,7 +20,7 @@ export default function MobileDev() {
     return (
         <section id="mobile" className="h-screen bg-secondary flex flex-col pt-28 items-center">
             <p className="text-huge  font-bold text-center mobile-header">
-                Mobile Development
+                
             </p> 
             <Slider items={languages} className="my-6 z-0" />
         </section>

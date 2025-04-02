@@ -18,9 +18,9 @@ export default function AboutMe() {
     const c = useTranslations('Commons');
 
     return (
-        <section id="about" className="h-screen text-primary box-border flex items-center text-center justify-center pt-14" >
+        <section id="about" className="h-screen text-primary box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14" >
             <div className="flex space-x-4 w-full px-4 items-center justify-center">
-                <div className="p-4">
+                <div className="p-4 ">
                     <Image
                         src={myself}
                         alt="Una descripción de la imagen"
@@ -47,15 +47,16 @@ export default function AboutMe() {
                                     <div className="flex flex-1 justify-center items-center">
                                         <Image
                                             src={dgti}
-                                            alt="Una descripción de la imagen"
-                                            height={120}
+                                            alt="Una descripción de la imagen" 
+
+                                            style={{ height: '15vh', width: 'auto' }}
                                         />
                                     </div>
                                     <div className="flex flex-1 justify-center items-center">
                                         <Image
                                             src={cbtis}
-                                            alt="Una descripción de la imagen"
-                                            height={130}
+                                            alt="Una descripción de la imagen" 
+                                            style={{ height: '15vh', width: 'auto' }}
                                         />
                                     </div>
                                 </div>
@@ -69,14 +70,14 @@ export default function AboutMe() {
                                         <Image
                                             src={uanl}
                                             alt="Una descripción de la imagen"
-                                            height={130}
+                                            style={{ height: '15vh', width: 'auto' }}
                                         />
                                     </div>
                                     <div className="flex flex-1 justify-center items-center">
                                         <Image
                                             src={fime}
                                             alt="Una descripción de la imagen"
-                                            height={130}
+                                            style={{ height: '15vh', width: 'auto' }}
                                         />
                                     </div>
                                 </div>
