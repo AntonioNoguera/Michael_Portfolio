@@ -23,16 +23,19 @@ export default function MobileDev() {
     ];
 
     return (
-        <section id="mobile" className="h-screen bg-secondary flex flex-col pt-28 items-center justify-center">
-            <p className="text-huge  font-bold text-center mobile-header">{t('title').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                    {line}
-                    <br />
-                </React.Fragment>
-            ))}
+        <section id="mobile" className="h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14">
+            <p className="text-page_title font-bold text-center mobile-header ">
+                {t('title').split('\n').map((line, index) => (
+                    <React.Fragment key={index}>
+                        {line}
+                        <br className="br-tall" />
+                    </React.Fragment>
+                ))}
             </p>
 
-            <p className="text-body2 text-black_primary">Haz clic en cualquiera de las tarjetas para obtener mas información</p>
+            <p className="text-body2 text-center px-28 text-black_primary">
+                {t('subtitle')}
+                </p>
             <Slider items={languages} className="fade-sides z-0" />
         </section>
     );

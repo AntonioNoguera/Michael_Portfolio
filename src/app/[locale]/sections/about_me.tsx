@@ -15,7 +15,7 @@ export default function AboutMe() {
     const c = useTranslations('Commons');
 
     return (
-        <section id="about" className="h-screen text-primary box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14" >
+        <section id="about" className="h-screen text-primary snap-start box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14" >
             <div className="flex space-x-10 w-full px-10  items-center justify-center">
                 <div className=" ">
                     <Image

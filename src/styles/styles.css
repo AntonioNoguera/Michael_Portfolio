@@ -66,3 +66,15 @@ html {
    right: 0;
    background: linear-gradient(to left, #E9E8FF, rgba(255, 255, 255, 0));
 }
+
+
+@media (min-height: 800px) {
+   .br-tall {
+     display: inline;
+   }
+ }
+ @media (max-height: 799px) {
+   .br-tall {
+     display: none;
+   }
+ }

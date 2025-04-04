@@ -1,13 +1,28 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Link } from '@i18n/navigation';
 import Footer from '@/components/Footer';
 import AboutMe from './sections/about_me';
 import MobileDev from './sections/mobile/mobile_dev';
+import { motion, useScroll } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function HomePage() { 
 
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const unsubscribe = scrollY.onChange((latest) => {
+      // Aquí podrías calcular a qué sección se debe hacer scroll y usar una animación para regresar
+      // a la posición de inicio de la sección
+    });
+    return () => unsubscribe();
+  }, [scrollY]);
+
   return (
-    <>
+    <motion.div className="overflow-y-scroll snap-y snap-mandatory h-screen">
+
       <AboutMe/>
 
       <MobileDev/>
@@ -26,6 +41,6 @@ export default function HomePage() {
           <Footer />
         </div>
       </section>
-    </>
+    </motion.div>
   )
 }
