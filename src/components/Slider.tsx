@@ -36,7 +36,7 @@ export default function AutoScrollCarousel({ items, className }: AutoScrollCarou
     });
 
     return (
-        <div ref={sliderRef} className={` keen-slider mx-16 ${className ?? ''}`}>
+        <div ref={sliderRef} className={` keen-slider  ${className ?? ''}`}>
             {items.map((item, index) => (
                 <div key={index} className="keen-slider__slide">
                     {item}

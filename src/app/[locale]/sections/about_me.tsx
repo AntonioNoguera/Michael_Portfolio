@@ -94,14 +94,9 @@ export default function AboutMe() {
                                         <Image src={ios} alt="Apple" width={30} />
                                     </div>
                                 </div>
-
                             </div>
-
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
