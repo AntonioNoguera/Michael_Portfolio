@@ -1,7 +1,7 @@
 import { Locale, hasLocale, NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { Raleway } from 'next/font/google'
 

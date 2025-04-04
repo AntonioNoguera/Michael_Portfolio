@@ -1,7 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@i18n/navigation';
+
 import Footer from '@/components/Footer';
 import AboutMe from './sections/about_me';
 import MobileDev from './sections/mobile/mobile_dev';
@@ -13,7 +12,7 @@ export default function HomePage() {
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    const unsubscribe = scrollY.onChange((latest) => {
+    const unsubscribe = scrollY.onChange((_) => {
       // Aquí podrías calcular a qué sección se debe hacer scroll y usar una animación para regresar
       // a la posición de inicio de la sección
     });
