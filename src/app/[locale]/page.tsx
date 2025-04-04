@@ -12,7 +12,7 @@ export default function HomePage() {
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    const unsubscribe = scrollY.onChange((_) => {
+    const unsubscribe = scrollY.onChange(() => {
       // Aquí podrías calcular a qué sección se debe hacer scroll y usar una animación para regresar
       // a la posición de inicio de la sección
     });

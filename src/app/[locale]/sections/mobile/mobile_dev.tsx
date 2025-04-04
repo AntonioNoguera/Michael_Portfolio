@@ -14,11 +14,11 @@ export default function MobileDev() {
     const t = useTranslations('Mobile_Section');
 
     const languages = [
-        <LanguageCard image={kotlin} label="Kotlin" className="kotlin-header" />,
-        <LanguageCard image={swift} label="Swift" className="swift-header" />,
-        <LanguageCard image={dart} label="Dart" className="dart-header" />,
-        <LanguageCard image={ionic} label="Ionic" className="ionic-header" />,
-    ];
+        <LanguageCard key="kotlin" image={kotlin} label="Kotlin" className="kotlin-header" />,
+        <LanguageCard key="swift" image={swift} label="Swift" className="swift-header" />,
+        <LanguageCard key="dart" image={dart} label="Dart" className="dart-header" />,
+        <LanguageCard key="ionic" image={ionic} label="Ionic" className="ionic-header" />,
+      ];
 
     return (
         <section id="mobile" className="h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14">
