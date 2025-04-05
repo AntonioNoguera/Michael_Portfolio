@@ -1,24 +1,9 @@
-import Slider from "@/components/Slider";
-
-import kotlin from '@png_assets/LOGO_KOTLIN.png'
-import swift from '@png_assets/Swift.png'
-import dart from '@png_assets/LOGO_DART.png'
-import ionic from '@png_assets/LOGO_IONIC.png'
-
-import LanguageCard from "./components/language_card";
 import { useTranslations } from "next-intl";
 import React from "react";
 
-export default function MobileDev() {
+export default function WebSection() {
 
     const t = useTranslations('Mobile_Section');
-
-    const languages = [
-        <LanguageCard key="kotlin" image={kotlin} label="Kotlin" className="kotlin-header" />,
-        <LanguageCard key="swift" image={swift} label="Swift" className="swift-header" />,
-        <LanguageCard key="dart" image={dart} label="Dart" className="dart-header" />,
-        <LanguageCard key="ionic" image={ionic} label="Ionic" className="ionic-header" />,
-    ];
 
     return (
         <section id="mobile" className="h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14">

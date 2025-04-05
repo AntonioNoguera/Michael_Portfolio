@@ -1,11 +1,11 @@
 'use client';
 
 
-import Footer from '@/components/Footer';
-import AboutMe from './sections/about_me';
+import Footer from '@/components/Footer'; 
 import MobileDev from './sections/mobile/mobile_dev';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect } from 'react';
+import AboutMe from './sections/about_me/about_me';
 
 export default function HomePage() { 
 
