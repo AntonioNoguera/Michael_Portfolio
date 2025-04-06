@@ -36,7 +36,7 @@ export default function MobileDev() {
             <p className="text-body2 text-center px-28 text-black_primary">
                 {t('subtitle')}
             </p>
-
+            <Slider items={languages} className="fade-sides z-0" />
         </section>
     );
 }

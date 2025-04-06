@@ -30,5 +30,9 @@
   "Mobile_Section": {
     "title" : "Desarrollo \nMóvil",
     "subtitle": "Explora mis habilidades en desarrollo móvil. Haz clic en una tarjeta del lenguaje para obtener más información."
+  },
+  "Web_Section": {
+    "title" : "Web \nDevelopment",
+    "subtitle": "Explore my web development skills. Click on a card to discover the languages I master."
   }
 }
