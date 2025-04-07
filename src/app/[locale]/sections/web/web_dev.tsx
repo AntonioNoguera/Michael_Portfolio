@@ -31,7 +31,7 @@ export default function WebSection() {
                 }
             </p>
 
-            <p className="text-body2 text-center px-28 text-black_primary">
+            <p className="text-body2 text-center px-28 pt-6 text-black_primary">
                 {t('subtitle')}
             </p>
 

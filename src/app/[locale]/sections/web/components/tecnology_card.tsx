@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'motion/react';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
@@ -12,7 +13,10 @@ type LanguageCardProps = {
 
 export default function TecnologyCard({ image, label, classForLabel = '', className = '' }: LanguageCardProps) {
     return (
-        <div className={`py-5 m-8 cursor-pointer flex bg-white flex-col justify-center  ${className} items-center bg-white_primary shadow-std rounded-xl`}>
+        <motion.div 
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }} 
+        className={`py-5 m-8 cursor-pointer flex bg-white flex-col justify-center  ${className} items-center bg-white_primary shadow-std rounded-xl`}>
             
             <p className={`text-center px-5 text-h2 font-semibold ${classForLabel}`}>{label}</p>
             
@@ -31,6 +35,6 @@ export default function TecnologyCard({ image, label, classForLabel = '', classN
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }
