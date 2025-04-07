@@ -3,15 +3,14 @@ import path from 'path';
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { Configuration } from 'webpack';
-
-// Plugin de next-intl, apuntando a la configuración de routing
+ 
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  skipTrailingSlashRedirect: true, // Evita redirecciones innecesarias
+  skipTrailingSlashRedirect: true,
 
   images: {
-    domains: ['localhost'], // Puedes agregar más dominios si usas imágenes externas
+    domains: ['localhost'],
   },
 
   webpack(config: Configuration) {
