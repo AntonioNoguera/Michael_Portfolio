@@ -31,6 +31,9 @@
 
   "Web_Section": {
     "title" : "Web \nDevelopment",
-    "subtitle": "Explore my web development skills. Click on a card to discover the languages I master."
+    "subtitle": "Explore my web development skills. Click on a card to discover the languages I master.",
+    "programming_languages": "Programming Languages",
+    "libraries_languages": "Liraries & Frameworks",
+    "css_languages": "CSS Libraries"
   }
 }

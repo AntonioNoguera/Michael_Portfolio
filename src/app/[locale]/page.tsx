@@ -21,7 +21,7 @@ export default function HomePage() {
   }, [scrollY]);
 
   return (
-    <motion.div className="overflow-y-scroll snap-y snap-mandatory h-screen">
+    <motion.div className="overflow-y-scroll snap-y snap-mandatory h-screen scroll-smooth">
 
       <AboutMe/>
 

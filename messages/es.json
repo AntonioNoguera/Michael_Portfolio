@@ -2,11 +2,9 @@
   "Title": {
     "title_name": "Portafolio Michael"
   },
-
-  "Commons": { 
+  "Commons": {
     "name": "Michael Noguera"
   },
-
   "Navbar": {
     "dev_name": "Michael Noguera",
     "about_me": "Sobre Mí",
@@ -14,9 +12,8 @@
     "web_section": "Desarrollo Web",
     "contact_me": "Contáctame"
   },
-
   "About_Me_Section": {
-    "description" : "Hola, soy Michael Noguera, ingeniero de software apasionado por crear soluciones que conectan diseño y funcionalidad. Me encanta el desarrollo móvil y siempre busco aprender cosas nuevas.",
+    "description": "Hola, soy Michael Noguera, ingeniero de software apasionado por crear soluciones que conectan diseño y funcionalidad. Me encanta el desarrollo móvil y siempre busco aprender cosas nuevas.",
     "vocational_training_title": "Desarrollo Académico",
     "tecnitian": "Técnico en Programación",
     "engineer": "Ingeniero en Tecnología de Software",
@@ -25,14 +22,17 @@
     "android_intern": "Practicante de Android",
     "ios_developer": "Desarrollador de iOS",
     "internship_period": "Nov 24 - Mar 25",
-    "fulltime_period": "Mar 25 - Actualidad" 
+    "fulltime_period": "Mar 25 - Actualidad"
   },
   "Mobile_Section": {
-    "title" : "Desarrollo \nMóvil",
+    "title": "Desarrollo \nMóvil",
     "subtitle": "Explora mis habilidades en desarrollo móvil. Haz clic en una tarjeta del lenguaje para obtener más información."
   },
   "Web_Section": {
-    "title" : "Web \nDevelopment",
-    "subtitle": "Explore my web development skills. Click on a card to discover the languages I master."
+    "title": "Desarrollo \nWeb",
+    "subtitle": "Explora mis habilidades en desarrollo web. Haz clic en una tarjeta para descubrir los lenguajes que domino.",
+    "programming_languages": "Lenguajes de Programación",
+    "libraries_languages": "Librerías y Frameworks",
+    "css_languages": "Librerías de CSS"
   }
 }

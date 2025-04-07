@@ -45,13 +45,35 @@ html {
    -webkit-text-fill-color: transparent;
 }
 
+ 
+.programming-languages-header {
+   background: #2D639E;
+   background: linear-gradient(to bottom, #2D639E 0%, #666666 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.libraries-frameworks-header {
+   background: #03A3BF;
+   background: linear-gradient(to bottom, #03A3BF 0%, #666666 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.css-libraries-header {
+   background: #8C13FD;
+   background: linear-gradient(to bottom, #8C13FD 0%, #666666 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
 .fade-sides::before,
 .fade-sides::after {
    content: "";
    position: absolute;
    top: 0;
    width: 40px;
-   /* Ancho del gradiente */
    height: 100%;
    z-index: 10;
    pointer-events: none;
