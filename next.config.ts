@@ -1,9 +1,19 @@
+// next.config.ts
 import path from 'path';
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { Configuration } from 'webpack';
 
+// Plugin de next-intl, apuntando a la configuración de routing
+const withNextIntl = createNextIntlPlugin();
+
 const nextConfig: NextConfig = {
+  skipTrailingSlashRedirect: true, // Evita redirecciones innecesarias
+
+  images: {
+    domains: ['localhost'], // Puedes agregar más dominios si usas imágenes externas
+  },
+
   webpack(config: Configuration) {
     config.resolve = {
       ...config.resolve,
@@ -20,7 +30,5 @@ const nextConfig: NextConfig = {
     return config;
   },
 };
-
-const withNextIntl = createNextIntlPlugin();
 
 export default withNextIntl(nextConfig);

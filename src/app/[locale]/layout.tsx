@@ -7,7 +7,7 @@ import { Raleway } from 'next/font/google'
 import Navbar from '@components/Navbar';
 
 import '../../styles/styles.css'
-import routing from '@/i18n/routing';
+import {routing} from '@/i18n/routing';
 
 const raleway = Raleway({
     subsets: ['latin'],
