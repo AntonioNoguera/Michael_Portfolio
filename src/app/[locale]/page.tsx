@@ -1,7 +1,5 @@
 'use client';
 
-
-import Footer from '@/components/Footer'; 
 import MobileDev from './sections/mobile/mobile_dev';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect } from 'react';

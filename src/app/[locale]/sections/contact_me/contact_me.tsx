@@ -3,12 +3,9 @@
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-import { Modal } from "@/components/Modal";
 import Footer from "@/components/Footer";
 
 export default function ContactSection() {
-
-    const [isOpen, setIsOpen] = useState(false);
 
     const t = useTranslations('Web_Section');
 
