@@ -8,6 +8,7 @@ import Navbar from '@components/Navbar';
 
 import '../../styles/styles.css'
 import {routing} from '@/i18n/routing';
+import VideoBackgroundWrapper from '@/components/VideoBackgroundWrapper';
 
 const raleway = Raleway({
     subsets: ['latin'],
@@ -27,7 +28,6 @@ export default async function LocaleLayout({ children, params }: Props) {
     }
 
     setRequestLocale(locale);
-
     const messages = await getMessages();
 
     return (
@@ -36,30 +36,14 @@ export default async function LocaleLayout({ children, params }: Props) {
                 <title>Michael Portfolio</title>
             </head>
             <body className={`${raleway.variable} font-sans`}>
-
                 <NextIntlClientProvider locale={locale} messages={messages}>
-
-                    <div className="absolute top-0 left-0 w-full h-screen overflow-hidden z-[-10]">
-
-                        <video
-                            className="w-full h-full object-cover"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                        >
-                            <source src="/mp4/pattern.mp4" type="video/mp4" />
-                            Tu navegador no soporta el video.
-                        </video>
-                    </div>
-                    <Navbar />
-
-                    <main className="flex-1">
-                        {children}
-                    </main>
-
+                    <VideoBackgroundWrapper>
+                        <Navbar />
+                        <main className="flex-1">
+                            {children}
+                        </main>
+                    </VideoBackgroundWrapper>
                 </NextIntlClientProvider>
-
             </body>
         </html>
     );

@@ -9,7 +9,7 @@ import github_logo from '@svg_assets/svg_github.svg';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-primary text-white py-4">
+        <footer className="bg-primary text-white py-4 w-full">
             <div className="container mx-auto px-4 flex gap-8 flex-col md:flex-row items-center justify-center">
 
                 <Image

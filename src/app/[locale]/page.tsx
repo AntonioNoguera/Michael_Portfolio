@@ -7,6 +7,7 @@ import { motion, useScroll } from 'framer-motion';
 import { useEffect } from 'react';
 import AboutMe from './sections/about_me/about_me';
 import WebSection from './sections/web/web_dev';
+import ContactSection from './sections/contact_me/contact_me';
 
 export default function HomePage() { 
 
@@ -28,21 +29,8 @@ export default function HomePage() {
       <MobileDev/>
 
       <WebSection/>
-
-      <section id="web" className="h-screen bg-gray pt-20">
-        <h2 className="text-3xl font-semibold mb-4">projects_title</h2>
-        <p>projects_content</p>
-      </section>
-
-      <section id="contact" className="h-screen  flex flex-col pt-20">
-        <div className="flex-grow">
-          <h2 className="text-3xl font-semibold mb-4">contact_title</h2>
-          <p>contact_content</p>
-        </div>
-        <div className="mt-auto">
-          <Footer />
-        </div>
-      </section>
+      
+      <ContactSection/>
     </motion.div>
   )
 }

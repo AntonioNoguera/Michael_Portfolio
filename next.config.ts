@@ -3,7 +3,7 @@ import path from 'path';
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { Configuration } from 'webpack';
- 
+
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
