@@ -24,8 +24,6 @@ export default function WebSection() {
     return (
         <section id="web" className="h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14">
 
-
-
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
                 <h2 className="text-lg font-bold mb-2">¡Hola!</h2>
                 <p>Este es un modal con animación de Framer Motion.</p>
@@ -57,7 +55,7 @@ export default function WebSection() {
                     className="w-[28%]" 
                     classForLabel="programming-languages-header" 
                     onClick={() => setIsOpen(true)}
-                />
+                />99
 
                 <TecnologyCard
                     key="frameworks"

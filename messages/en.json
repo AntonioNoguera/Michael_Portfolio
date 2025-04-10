@@ -35,5 +35,10 @@
     "programming_languages": "Programming Languages",
     "libraries_languages": "Liraries & Frameworks",
     "css_languages": "CSS Libraries"
+  },
+
+  "Contact_Section": {
+    "title": "Contact Me",
+    "subtitle": "Temporal"
   }
 }
