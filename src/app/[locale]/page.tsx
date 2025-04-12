@@ -29,6 +29,7 @@ export default function HomePage() {
       <WebSection/>
       
       <ContactSection/>
+      
     </motion.div>
   )
 }
