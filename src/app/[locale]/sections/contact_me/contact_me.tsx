@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 
 import Footer from "@/components/Footer";
+import TecnologyCard from "../web/components/tecnology_card";
 
 export default function ContactSection() {
 
@@ -20,6 +21,13 @@ export default function ContactSection() {
                     {t('subtitle')}
                 </p>
             </div>
+
+            <div className="flex flex-wrap w-full justify-center items-center items-stretch">
+
+
+            </div>
+
+
 
             <Footer />
         </section>

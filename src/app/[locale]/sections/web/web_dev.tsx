@@ -3,8 +3,8 @@
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-import ts from '@png_assets/LOGO_TS.png'
-import js from '@png_assets/LOGO_JS.png'
+import ts from '@png_assets/LOGO_TS.png';
+import js from '@png_assets/LOGO_JS.png';
 
 import react from '@png_assets/LOGO_REACT.png'
 import next from '@svg_assets/svg_next.svg'
@@ -18,7 +18,6 @@ import { Modal } from "@/components/Modal";
 export default function WebSection() {
 
     const [isOpen, setIsOpen] = useState(false);
-
     const t = useTranslations('Web_Section');
 
     return (
@@ -27,10 +26,9 @@ export default function WebSection() {
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
                 <h2 className="text-lg font-bold mb-2">¡Hola!</h2>
                 <p>Este es un modal con animación de Framer Motion.</p>
-                
             </Modal>
-
-            <p className="text-page_title font-bold text-center text-black_primary ">
+            
+            <p className="text-page_title font-bold text-center text-black_primary">
                 {
                     t('title').split('\n').map(
                         (line, index) => (
@@ -55,7 +53,7 @@ export default function WebSection() {
                     className="w-[28%]" 
                     classForLabel="programming-languages-header" 
                     onClick={() => setIsOpen(true)}
-                />99
+                />
 
                 <TecnologyCard
                     key="frameworks"
