@@ -17,20 +17,20 @@ export default function ContactSection() {
                 {t('title')}
             </p>
 
-            <div className="flex-grow flex flex-col items-center justify-center w-full">
-
-                <p className="text-body2 text-center px-28 pt-6 text-black_primary">
+            <p className="text-body2 text-center px-28 pt-6 text-black_primary">
                     {t('subtitle')}
                 </p>
 
-                <div className="flex flex-wrap w-full justify-center items-center items-stretch">
+            <div className="flex-grow flex flex-col items-center justify-center w-full">
+
+                <div className="flex flex-wrap w-full justify-center items- items-stretch">
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
-                        className={`py-5 m-8 cursor-pointer flex bg-white flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
+                        className={`py-5 m-8 cursor-pointer flex flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
 
                         <p className={'text-center px-5 text-h2 font-semibold'}>
-                            Test
+                            Curriculum Vitae
                         </p>
 
                     </motion.div>
@@ -38,27 +38,25 @@ export default function ContactSection() {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
-                        className={`py-5 m-8 cursor-pointer flex bg-white flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
+                        className={`py-5 m-8 cursor-pointer flex flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
 
                         <p className={'text-center px-5 text-h2 font-semibold'}>
-                            Test
+                            Correo Electrónico
                         </p>
-
                     </motion.div>
 
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
-                        className={`py-5 m-8 cursor-pointer flex bg-white flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
+                        className={`py-5 m-8 cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
 
                         <p className={'text-center px-5 text-h2 font-semibold'}>
                             Test
                         </p>
-
                     </motion.div>
 
                 </div>
-            </div> 
+            </div>
             <Footer />
         </section>
     );

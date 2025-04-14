@@ -25,20 +25,18 @@
     "fulltime_period": "Mar 25 - Present"
   },
   "Mobile_Section": {
-    "title" : "Mobile \nDevelopment",
+    "title": "Mobile \nDevelopment",
     "subtitle": "Explore my mobile development skills. Click on a card to discover the languages I master."
   },
-
   "Web_Section": {
-    "title" : "Web \nDevelopment",
+    "title": "Web \nDevelopment",
     "subtitle": "Explore my web development skills. Click on a card to discover the languages I master.",
     "programming_languages": "Programming Languages",
     "libraries_languages": "Liraries & Frameworks",
     "css_languages": "CSS Libraries"
   },
-
   "Contact_Section": {
     "title": "Contact Me",
-    "subtitle": "Temporal"
+    "subtitle": "¿Tienes un proyecto en mente, una oportunidad laboral o simplemente quieres saludar? ¡Estoy disponible para colaborar, resolver dudas o compartir ideas!"
   }
 }

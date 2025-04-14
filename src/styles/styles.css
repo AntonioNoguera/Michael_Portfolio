@@ -11,10 +11,23 @@ html {
 }
 
 .mobile-header {
-   background: #33595E;
-   background: linear-gradient(to right, #33595E 28%, #6ABAC4 100%);
+   background: linear-gradient(90deg, #33595E, #6ABAC4, #33595E);
+   background-size: 200% auto;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+   animation: gradientMove 10s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
 }
 
 .kotlin-header {
@@ -44,7 +57,6 @@ html {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
-
  
 .programming-languages-header {
    background: #2D639E;
@@ -66,7 +78,6 @@ html {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
-
 
 .fade-sides::before,
 .fade-sides::after {

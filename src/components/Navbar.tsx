@@ -37,7 +37,7 @@ export default function Navbar() {
             height={30}
           />
 
-          <h1 className="text-xl font-bold">{t('dev_name')}</h1>
+          <span className="text-xl font-bold">{t('dev_name')}</span>
         </div>
 
         <div className="flex items-center">

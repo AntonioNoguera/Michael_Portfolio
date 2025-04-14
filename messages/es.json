@@ -34,9 +34,9 @@
     "programming_languages": "Lenguajes de Programación",
     "libraries_languages": "Librerías y Frameworks",
     "css_languages": "Librerías de CSS"
-  },
+  }, 
   "Contact_Section": {
     "title": "Contáctame",
-    "subtitle": "Temporal"
+    "subtitle": "¿Tienes un proyecto en mente, una oportunidad laboral o simplemente quieres saludar? ¡Estoy disponible para colaborar, resolver dudas o compartir ideas!"
   }
 }

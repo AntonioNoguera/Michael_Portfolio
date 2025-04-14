@@ -16,16 +16,16 @@ const backdrop = {
 
 const modal = {
     hidden: {
-        opacity: 0, 
+        opacity: 0,
         scale: 0.75,
     },
     visible: {
-        opacity: 1, 
+        opacity: 1,
         scale: 1,
         transition: { delay: 0.1 },
     },
     exit: {
-        opacity: 0, 
+        opacity: 0,
         scale: 0.75,
     },
 };
@@ -43,7 +43,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                     onClick={onClose}
                 >
                     <motion.div
-                        className="relative bg-white rounded-xl shadow-xl p-6 z-60 w-[80%] w-full"
+                        className="relative bg-white rounded-xl shadow-xl p-6 z-60 w-[80%]"
                         variants={modal}
                         initial="hidden"
                         animate="visible"
