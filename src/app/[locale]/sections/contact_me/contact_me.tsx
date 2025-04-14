@@ -3,8 +3,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import Footer from "@/components/Footer";
-import TecnologyCard from "../web/components/tecnology_card";
+import Footer from "@/components/Footer"; 
 import { motion } from "framer-motion";
 
 export default function ContactSection() {
