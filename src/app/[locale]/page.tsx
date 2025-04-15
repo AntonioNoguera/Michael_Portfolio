@@ -7,7 +7,7 @@ import AboutMe from './sections/about_me/about_me';
 import WebSection from './sections/web/web_dev';
 import ContactSection from './sections/contact_me/contact_me';
 
-export default function HomePage() { 
+export default function HomePage() {
 
   const { scrollY } = useScroll();
 
@@ -22,14 +22,14 @@ export default function HomePage() {
   return (
     <motion.div className="overflow-y-scroll snap-y snap-mandatory h-screen scroll-smooth">
 
-      <AboutMe/>
+      <WebSection />
 
-      <MobileDev/>
+      <AboutMe />
 
-      <WebSection/>
-      
-      <ContactSection/>
-      
+      <MobileDev />
+
+      <ContactSection />
+
     </motion.div>
   )
 }

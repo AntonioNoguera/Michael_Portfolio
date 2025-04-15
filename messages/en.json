@@ -9,7 +9,7 @@
     "dev_name": "Michael Noguera",
     "about_me": "About Me",
     "mobile_section": "Mobile Development",
-    "web_section": "Wev Development",
+    "web_section": "Web Development",
     "contact_me": "Contact Me"
   },
   "About_Me_Section": {
@@ -32,7 +32,7 @@
     "title": "Web \nDevelopment",
     "subtitle": "Explore my web development skills. Click on a card to discover the languages I master.",
     "programming_languages": "Programming Languages",
-    "libraries_languages": "Liraries & Frameworks",
+    "libraries_languages": "Libraries & Frameworks",
     "css_languages": "CSS Libraries"
   },
   "Contact_Section": {
