@@ -63,6 +63,7 @@ html {
    background: linear-gradient(to bottom, #2D639E 0%, #666666 100%);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+   padding-bottom: 10px;
 }
 
 .libraries-frameworks-header {

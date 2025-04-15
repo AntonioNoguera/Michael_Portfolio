@@ -7,36 +7,36 @@ import React from 'react';
 type LanguageCardProps = {
     image: (StaticImageData | string)[];
     label: string;
-    className: string;
     classForLabel?: string;
     onClick?: () => void;
 };
 
-export default function TecnologyCard({ image, label, classForLabel = '', className = '', onClick}: LanguageCardProps) {
+export default function TecnologyCard({ image, label, classForLabel = '', onClick }: LanguageCardProps) {
     return (
-        <motion.div 
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={onClick}
-        className={`py-5 m-8 cursor-pointer flex flex-col justify-center w-full md:w-[45%] lg:w-[28%] items-center bg-white_primary shadow-std rounded-xl`}>
-            
-            <p className={`text-center px-5 text-h2 font-semibold ${classForLabel}`}>{label}</p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-                {image.map((img, index) => (
-                    <Image
-                        key={index}
-                        src={img}
-                        alt={`${label}-${index}`}
-                        className="pb-2"
-                        style={{
-                            height: '20vh',
-                            width: 'auto',
-                        }}
-                        height={180}
-                    />
-                ))}
-            </div>
-        </motion.div>
+        <div className='p-4 w-full lg:w-[30%] md:w-[28%]'>
+            <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={onClick}
+                className={`py-5 cursor-pointer flex h-full flex-col justify-around bg-white_primary shadow-std rounded-xl `}>
+
+                <p className={`text-center px-5 text-xl md:text-h2 font-semibold ${classForLabel}`}>{label}</p>
+
+                <div className="flex flex-wrap justify-center gap-4">
+                    {image.map((img, index) => (
+                        <Image
+                            key={index}
+                            src={img}
+                            alt={`${label}-${index}`}
+                            className="pb-2 h-[10vh] md:h-[20vh]"
+                            style={{ 
+                                width: 'auto',
+                            }}
+                            height={180}
+                        />
+                    ))}
+                </div>
+            </motion.div>
+        </div>
     );
 }
