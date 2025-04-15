@@ -35,7 +35,7 @@ export default function AboutMe() {
                 </div>
 
                 {/* Info - adaptada con breakpoints de Tailwind */}
-                <div className="w-full md:w-3/4 text-center md:text-left transition-all duration-300">
+                <div className="w-full md:w-3/4 text-center md:text-left transition-all duration-300 md:pr-0 pr-5">
                     {/* Descripción */}
                     <div className="mb-6 w-full">
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">{c('name')}</h1>

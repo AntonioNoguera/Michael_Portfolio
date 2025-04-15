@@ -28,7 +28,7 @@ export default function WebSection() {
                 <p>Este es un modal con animación de Framer Motion.</p>
             </Modal>
             
-            <p className="pt-6 md:pt-0 text-5xl md:text-8xl lg:text-page_title font-bold text-center text-black_primary px-4 md:px-6">
+            <p className="text-5xl md:text-8xl lg:text-page_title font-bold text-center text-black_primary px-4 md:px-6 transition-all duration-300">
                 {
                     t('title').split('\n').map(
                         (line, index) => (
@@ -45,7 +45,7 @@ export default function WebSection() {
                 {t('subtitle')}
             </p>
 
-            <div className="flex flex-col md:flex-row md:gap-6 flex-wrap w-full justify-center items-strech">
+            <div className="flex flex-col md:flex-row md:gap-6 flex-wrap w-full justify-center items-strech transition-all duration-300">
                 <TecnologyCard
                     key="programming"
                     image={[ts, js]}
