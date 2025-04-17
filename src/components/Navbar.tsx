@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 
-import github_logo from '@png_assets/LOGO_GITHUB.png';
+import github_logo from '@svg_assets/svg_personal_github.svg';
 import spanish_flag from '@png_assets/FLAG_SPANISH.png';
 import english_flag from '@png_assets/FLAG_ENGLISH.png';
 

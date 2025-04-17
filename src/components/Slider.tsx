@@ -17,8 +17,22 @@ type AutoScrollCarouselProps = {
 export default function AutoScrollCarousel({ items, className }: AutoScrollCarouselProps) {
     const [sliderRef] = useKeenSlider<HTMLDivElement>({
         slides: {
-            perView: 3,
+            perView: 1,
             spacing: 30
+        },
+        breakpoints: {
+            "(min-width: 640px)": {
+                slides: {
+                    perView: 2,
+                    spacing: 30,
+                },
+            },
+            "(min-width: 1024px)": {
+                slides: {
+                    perView: 3,
+                    spacing: 30,
+                },
+            }
         },
         loop: true,
         renderMode: 'precision',
@@ -32,11 +46,10 @@ export default function AutoScrollCarousel({ items, className }: AutoScrollCarou
         animationEnded(s) {
             s.moveToIdx(s.track.details.abs + 5, true, animation);
         },
-        
     });
 
     return (
-        <div ref={sliderRef} className={` keen-slider  ${className ?? ''}`}>
+        <div ref={sliderRef} className={`keen-slider ${className ?? ''}`}>
             {items.map((item, index) => (
                 <div key={index} className="keen-slider__slide">
                     {item}

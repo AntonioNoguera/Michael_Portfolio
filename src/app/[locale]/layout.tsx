@@ -7,7 +7,7 @@ import { Raleway } from 'next/font/google'
 import Navbar from '@components/Navbar';
 
 import '../../styles/styles.css'
-import {routing} from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
 import VideoBackgroundWrapper from '@/components/VideoBackgroundWrapper';
 
 const raleway = Raleway({
@@ -22,7 +22,8 @@ type Props = {
 };
 
 export default async function LocaleLayout({ children, params }: Props) {
-    const { locale } = await params;
+    const { locale } = await params; 
+      
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
@@ -34,6 +35,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         <html className="h-full" lang={locale}>
             <head>
                 <title>Michael Portfolio</title>
+                <link rel="icon" href="/svg/svg_personal_github.svg" type="image/svg+xml" />
+                <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
             </head>
             <body className={`${raleway.variable} font-sans`}>
                 <NextIntlClientProvider locale={locale} messages={messages}>
