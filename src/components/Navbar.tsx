@@ -58,19 +58,19 @@ export default function Navbar() {
         {/* Escritorio */}
         <div className="hidden md:flex items-center">
           <div className="space-x-8 mr-6">
-            <a href="#about" className="hover:text-black relative group">
+            <a href="#about" className="hover:text-secondary relative group">
               {t('about_me')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#mobile" className="hover:text-black relative group">
+            <a href="#mobile" className="hover:text-secondary relative group">
               {t('mobile_section')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#web" className="hover:text-black relative group">
+            <a href="#web" className="hover:text-secondary relative group">
               {t('web_section')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contact" className="hover:text-black relative group">
+            <a href="#contact" className="hover:text-secondary relative group">
               {t('contact_me')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
             </a>

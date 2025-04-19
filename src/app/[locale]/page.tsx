@@ -22,11 +22,11 @@ export default function HomePage() {
   return (
     <motion.div className="overflow-y-scroll snap-y snap-mandatory h-screen scroll-smooth">
 
+      <AboutMe />
+
       <MobileDev />
 
       <WebSection />
-
-      <AboutMe />
 
       <ContactSection />
 

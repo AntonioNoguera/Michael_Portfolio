@@ -15,7 +15,7 @@ export default function AboutMe() {
     const c = useTranslations('Commons');
 
     return (
-        <section id="about" className="min-h-screen text-primary snap-start box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14">
+        <section id="about" className="min-h-screen text-primary snap-start box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14  pb-16 sm:pb-0">
             <div className="w-[95%] flex flex-col sm:flex-row space-x-4 md:space-x-8 lg:space-x-10 items-center justify-center">
                 {/* Foto - adaptada con breakpoints de Tailwind */}
                 <div className="w-[90%] sm:w-1/4 mb-6 md:mb-0 transition-all duration-300 mt-4 sm:mt-0">

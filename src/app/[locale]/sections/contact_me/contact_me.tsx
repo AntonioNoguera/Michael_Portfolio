@@ -11,8 +11,8 @@ export default function ContactSection() {
     const t = useTranslations('Contact_Section');
 
     return (
-        <section id="contact" className="h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-20">
-            <p className="text-page_title font-bold text-center text-black_primary">
+        <section id="contact" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14 pb-20 md:pb-0">
+            <p className="text-5xl md:text-8xl lg:text-page_title font-bold text-center text-black_primary px-4 md:px-6 transition-all duration-300 mt-4 lg:mt-0">
                 {t('title')}
             </p>
 

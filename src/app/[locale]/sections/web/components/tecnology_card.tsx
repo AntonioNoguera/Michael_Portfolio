@@ -20,7 +20,7 @@ export default function TecnologyCard({ image, label, classForLabel = '', onClic
                 onClick={onClick}
                 className={`py-5 cursor-pointer flex h-full flex-col justify-around bg-white_primary shadow-std rounded-xl `}>
 
-                <p className={`text-center px-5 text-xl md:text-h2 font-semibold ${classForLabel}`}>{label}</p>
+                <p className={`text-center px-5 text-xl md:text-body2 lg:text-h2 font-semibold ${classForLabel}`}>{label}</p>
 
                 <div className="flex flex-wrap justify-center gap-4">
                     {image.map((img, index) => (
@@ -28,7 +28,7 @@ export default function TecnologyCard({ image, label, classForLabel = '', onClic
                             key={index}
                             src={img}
                             alt={`${label}-${index}`}
-                            className="pb-2 h-[10vh] md:h-[20vh]"
+                            className="pb-2 h-[10vh] md:h-[15vh] lg:h-[20vh]"
                             style={{ 
                                 width: 'auto',
                             }}
