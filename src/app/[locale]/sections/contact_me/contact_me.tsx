@@ -35,7 +35,25 @@ export default function ContactSection() {
                         className={`py-5 m-8 cursor-pointer flex flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
 
                         <p className={'text-center px-5 text-h2 font-semibold'}>
-                            Curriculum Vitae
+                            Curriculum Vitae "Detallado"
+                            <Image
+                                src={cv}
+                                alt="Una descripción de la imagen"
+                                className=" mx-auto" 
+                                height={100} 
+                                priority
+                            />
+                        </p>
+
+                    </motion.div>
+
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
+                        className={`py-5 m-8 cursor-pointer flex flex-col justify-center  items-center bg-white_primary shadow-std rounded-xl`}>
+
+                        <p className={'text-center px-5 text-h2 font-semibold'}>
+                            C.V Harvard Format
                             <Image
                                 src={cv}
                                 alt="Una descripción de la imagen"
