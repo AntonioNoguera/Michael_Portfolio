@@ -37,6 +37,12 @@
   },
   "Contact_Section": {
     "title": "Contact Me",
-    "subtitle": "¿Tienes un proyecto en mente, una oportunidad laboral o simplemente quieres saludar? ¡Estoy disponible para colaborar, resolver dudas o compartir ideas!"
+    "subtitle": "¿Tienes un proyecto en mente, una oportunidad laboral o simplemente quieres saludar? ¡Estoy disponible para colaborar, resolver dudas o compartir ideas!",
+    "std_cv": "C.V Estándar Mexicano",
+    "std_cv_subtitle": "Ideal para vacantes en México",
+    "hrvd_cv": "C.V Formato Harvard",
+    "hrvd_cv_subtitle": "Usado para oportunidades internacionales",
+    "email": "Correo Electrónico",
+    "cv_email": "Te responderé en menos de 24h"
   }
 }

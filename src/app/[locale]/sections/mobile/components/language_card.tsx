@@ -15,7 +15,7 @@ export default function LanguageCard({ image, label, className = '' }: LanguageC
         <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className={`py-5 m-11  cursor-pointer flex bg-white flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
+            className={`py-5 m-11  cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
             <Image
                 src={image}
                 alt={label}
