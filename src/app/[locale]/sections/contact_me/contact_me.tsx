@@ -14,7 +14,7 @@ export default function ContactSection() {
     const t = useTranslations('Contact_Section');
 
     return (
-        <section id="contact" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-16 ">
+        <section id="contact" className="h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-16 ">
 
 
             <div className="flex-grow flex flex-col items-center justify-center w-full">
@@ -29,15 +29,15 @@ export default function ContactSection() {
 
                 <div className="flex flex-wrap w-full justify-center items- items-stretch">
                     <ContactOption
-                        image={mail}
-                        label={t('email')}
-                        sublabel={t('cv_email')}
+                        image={cv}
+                        label={t('std_cv')}
+                        sublabel={t('std_cv_subtitle')}
                     />
 
                     <ContactOption
-                        image={mail}
-                        label={t('email')}
-                        sublabel={t('cv_email')}
+                        image={cv}
+                        label={t('hrvd_cv')}
+                        sublabel={t('hrvd_cv_subtitle')}
                     />
 
                     <ContactOption 
