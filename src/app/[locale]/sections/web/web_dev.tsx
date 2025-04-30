@@ -14,6 +14,7 @@ import tailwind from '@png_assets/LOGO_Tailwind.png'
 
 import TecnologyCard from "./components/tecnology_card";
 import { Modal } from "@/components/Modal";
+import SharedLayoutAnimation from "./components/sub_sections/web_shared_sections";
 
 export default function WebSection() {
 
@@ -24,8 +25,7 @@ export default function WebSection() {
         <section id="web" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14 pb-20 md:pb-0">
 
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                <h2 className="text-lg font-bold mb-2">¡Hola!</h2>
-                <p>Este es un modal con animación de Framer Motion.</p>
+                <SharedLayoutAnimation/>
             </Modal>
             
             <p className="text-5xl md:text-8xl lg:text-page_title font-bold text-center text-black_primary px-4 md:px-6 transition-all duration-300 mt-4 lg:mt-0">
