@@ -22,7 +22,7 @@ export default function WebSection() {
     const t = useTranslations('Web_Section');
 
     return (
-        <section id="web" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14 pb-20 md:pb-0">
+        <section id="web" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-16 pb-20 md:pb-0">
 
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
                 <SharedLayoutAnimation/>
@@ -41,11 +41,13 @@ export default function WebSection() {
                 }
             </p>
 
-            <p className="text-sm md:text-body2 text-center px-4 md:px-8 lg:px-28 pt-6 text-black_primary">
+            {/* <p className="text-sm md:text-body2 text-center px-4 md:px-8 lg:px-28 pt-6 text-black_primary">
                 {t('subtitle')}
-            </p>
+            </p> */}
 
-            <div className="flex flex-col md:flex-row md:gap-6 flex-wrap w-full justify-center items-strech transition-all duration-300">
+            <SharedLayoutAnimation />            
+
+            {/* <div className="flex flex-col md:flex-row md:gap-6 flex-wrap w-full justify-center items-strech transition-all duration-300">
                 <TecnologyCard
                     key="programming"
                     image={[ts, js]}
@@ -69,7 +71,7 @@ export default function WebSection() {
                     classForLabel="css-libraries-header"
                     onClick={() => setIsOpen(true)}
                 />
-            </div>
+            </div> */}
         </section>
     );
 }

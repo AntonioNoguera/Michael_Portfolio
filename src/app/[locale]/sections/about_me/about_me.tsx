@@ -37,18 +37,18 @@ export default function AboutMe() {
                 {/* Info - adaptada con breakpoints de Tailwind */}
                 <div className="w-full md:w-3/4 text-center md:text-left transition-all duration-300 md:pr-0 pr-5">
                     {/* Descripción */}
-                    <div className="mb-6 w-full">
-                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">{c('name')}</h1>
+                    <div className="mb-6 w-full  text-center">
+                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black_primary">{c('name')}</h1>
                         <p className="text-sm md:text-base lg:text-lg mt-2">{t('description')}</p>
                     </div>
 
                     <div className="grid grid-cols-1 gap-6">
                         {/* Formación académica */}
                         <div className="mb-4 lg:mb-0">
-                            <h2 className="text-xl md:text-2xl font-semibold mb-3">{t('vocational_training_title')}</h2>
+                            <h2 className="text-xl md:text-2xl font-semibold mb-3 text-black_primary text-center">{t('vocational_training_title')}</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Técnico */}
-                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2">
+                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
                                     <p className="mb-2">{t('tecnitian')}</p>
                                     <div className="flex justify-center items-center gap-2 pb-1">
                                         <div className="h-12 sm:h-16 md:h-20 w-auto">
@@ -61,7 +61,7 @@ export default function AboutMe() {
                                 </div>
 
                                 {/* Ingeniería */}
-                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2">
+                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
                                     <p className="mb-2">{t('engineer')}</p>
                                     <div className="flex justify-center items-center gap-2 pb-1">
                                         <div className="h-12 sm:h-16 md:h-20 w-auto">
@@ -77,7 +77,7 @@ export default function AboutMe() {
 
                         {/* Experiencia profesional */}
                         <div className="mb-10 sm:mb-0">
-                            <h2 className="text-xl md:text-2xl font-semibold mb-3">{t('professional_experiencie_title')}</h2>
+                            <h2 className="text-xl md:text-2xl font-semibold mb-3 text-center text-black_primary">{t('professional_experiencie_title')}</h2>
 
                             <div className="shadow-std rounded-xl bg-white_primary px-3 py-3">
                                 {/* Prácticas */}

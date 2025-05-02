@@ -7,31 +7,35 @@ import { useState } from "react"
 export default function SharedLayoutAnimation() {
     const [selectedTab, setSelectedTab] = useState(tabs[0])
 
+    let tabMenuClass: string = "";
+    let underlineClass: string = "absolute bottom-0 left-0 right-0 h-[2px] bg-[#0f1115]";
+    let tabClass: string = "w-full bg-white flex text-white_primary px-4 py-4 cursor-pointer relative justify-items-center justify-center";
+
     return (
-        <>
-            <h3>DESARROLLO</h3>
+        <div className="w-full flex-grow">
 
             <nav>
-                <ul className="flex">
+                <ul className="flex bg-primary85">
                     {tabs.map((item) => (
                         <motion.li
                             key={item.label}
                             initial={false}
-                            animate={{
-                                backgroundColor:
-                                    item === selectedTab ? "#eee" : "#eee0",
-                            }}
-                            style={tab}
+                            animate={
+                                {
+                                    backgroundColor: item === selectedTab ? "#eee" : "#eee0",
+                                    color: item === selectedTab ? "#000000" : "",
+                                }
+                            }
+                            className={tabClass}
                             onClick={() => setSelectedTab(item)}
                         >
                             {`${item.icon} ${item.label}`}
-                            {item === selectedTab ? (
-                                <motion.div
-                                    style={underline}
-                                    layoutId="underline"
-                                    id="underline"
-                                />
-                            ) : null}
+
+                            {
+                                item === selectedTab ? (
+                                    <motion.div className={underlineClass} layoutId="underline" id="underline" />
+                                ) : null
+                            }
                         </motion.li>
                     ))}
                 </ul>
@@ -50,63 +54,17 @@ export default function SharedLayoutAnimation() {
                     </motion.div>
                 </AnimatePresence>
             </main>
-        </>
+        </div>
     )
 }
-
-const tabsStyles: React.CSSProperties = {
-    listStyle: "none",
-    padding: 0,
-    margin: 0,
-    fontWeight: 500,
-    fontSize: 14,
-}
-
-const tab: React.CSSProperties = {
-    ...tabsStyles,
-    borderRadius: 5,
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
-    width: "100%",
-    padding: "10px 15px",
-    position: "relative",
-    background: "white",
-    cursor: "pointer",
-    height: 24,
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flex: 1,
-    minWidth: 0,
-    userSelect: "none",
-    color: "#0f1115",
-}
-
-const underline: React.CSSProperties = {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 2,
-    background: "#0f1115",
-}
-
 
 const icon: React.CSSProperties = {
     fontSize: 128,
 }
 
-/**
- * ==============   Data   ================
- */
-
 const allIngredients = [
-    { icon: "🍅", label: "Tomato" },
-    { icon: "🥬", label: "Lettuce" },
-    { icon: "🧀", label: "Cheese" },
-    { icon: "🥕", label: "Carrot" },
-    { icon: "🍌", label: "Banana" }, 
-    { icon: "🥂", label: "Champers?" },
+    { icon: "🍅", label: "Proyectos" },
+    { icon: "🥬", label: "Habillidades Técnicas" },
 ]
- 
+
 const tabs = allIngredients
