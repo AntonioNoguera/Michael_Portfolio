@@ -50,7 +50,7 @@ export default function AboutMe() {
                                 {/* Técnico */}
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
                                     <p className="mb-2">{t('tecnitian')}</p>
-                                    <div className="flex justify-center items-center gap-2 pb-1">
+                                    <div className="flex justify-evenly pb-1 px-10">
                                         <div className="h-12 sm:h-16 md:h-20 w-auto">
                                             <Image src={dgti} alt="DGTI" className="h-full w-auto" />
                                         </div>
@@ -63,7 +63,7 @@ export default function AboutMe() {
                                 {/* Ingeniería */}
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
                                     <p className="mb-2">{t('engineer')}</p>
-                                    <div className="flex justify-center items-center gap-2 pb-1">
+                                    <div className="flex justify-evenly px-10 pb-1">
                                         <div className="h-12 sm:h-16 md:h-20 w-auto">
                                             <Image src={uanl} alt="UANL" className="h-full w-auto" />
                                         </div>

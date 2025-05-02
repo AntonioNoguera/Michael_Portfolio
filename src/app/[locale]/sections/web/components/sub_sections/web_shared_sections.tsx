@@ -7,26 +7,25 @@ import { useState } from "react"
 export default function SharedLayoutAnimation() {
     const [selectedTab, setSelectedTab] = useState(tabs[0])
 
-    let tabMenuClass: string = "";
-    let underlineClass: string = "absolute bottom-0 left-0 right-0 h-[2px] bg-[#0f1115]";
-    let tabClass: string = "w-full bg-white flex text-white_primary px-4 py-4 cursor-pointer relative justify-items-center justify-center";
-
+    let tabMenuClass: string = "flex bg-primary85 mx-20 rounded-2xl ";
+    let tabClass: string = "w-full m-3  flex text-white px-4 py-4  rounded-xl cursor-pointer relative justify-items-center justify-center";
+    let underlineClass: string = "absolute bottom-0 left-0 right-0 h-[2px] bg-[#0f1115] ";
+ 
     return (
-        <div className="w-full flex-grow">
-
+        <div className="flex-grow w-full pt-6">
             <nav>
-                <ul className="flex bg-primary85">
+                <ul className={tabMenuClass} >
                     {tabs.map((item) => (
                         <motion.li
-                            key={item.label}
-                            initial={false}
-                            animate={
+                            key= {item.label}
+                            initial= {false}
+                            animate= {
                                 {
                                     backgroundColor: item === selectedTab ? "#eee" : "#eee0",
                                     color: item === selectedTab ? "#000000" : "",
                                 }
                             }
-                            className={tabClass}
+                            className= {tabClass}
                             onClick={() => setSelectedTab(item)}
                         >
                             {`${item.icon} ${item.label}`}
