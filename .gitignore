@@ -21,6 +21,7 @@ pnpm-debug.log*
 
 # Vercel deployment
 .vercel/
+ 
 
 # Optional: Mac system files
 .DS_Store
@@ -28,6 +29,9 @@ pnpm-debug.log*
 # Optional: IDE configs
 .vscode/
 .idea/
+
+#Linter cache
+.eslintcache
 
 # Optional: TypeScript build output
 dist/
