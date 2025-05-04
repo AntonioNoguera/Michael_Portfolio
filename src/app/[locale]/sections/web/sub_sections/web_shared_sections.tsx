@@ -1,9 +1,12 @@
 "use client"
 
+import { useState } from "react"
+
 import { AnimatePresence } from "motion/react"
-import * as motion from "motion/react-client"
-import { useState } from "react" 
-import TecnicalTab from "./tecnical_knowledge/tecnical_tab"
+import * as motion from "motion/react-client" 
+
+import TecnicalTab from "./tecnical_knowledge/tecnical_tab" 
+import ProyectTab from "./proyects/proyect_tab"
 
 export default function SharedLayoutAnimation() {
     const [selectedTab, setSelectedTab] = useState(tabs[0])
@@ -13,7 +16,8 @@ export default function SharedLayoutAnimation() {
     let underlineClass: string = "absolute bottom-0 left-0 right-0 h-[2px] bg-[#00FF0000] ";
 
     return (
-        <div className=" w-full h-full flex flex-col pt-6">
+        <div className=" w-full h-full flex flex-col pt-6"> 
+
             <nav>
                 <ul className={tabMenuClass} >
                     {tabs.map((item) => (
@@ -26,8 +30,8 @@ export default function SharedLayoutAnimation() {
                                     color: item === selectedTab ? "#000000" : "",
                                 }
                             }
-                            className= {tabClass}
-                            onClick= {() => setSelectedTab(item)}>
+                            className={tabClass}
+                            onClick={() => setSelectedTab(item)}>
 
                             {item.title}
 
@@ -48,7 +52,7 @@ export default function SharedLayoutAnimation() {
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -10, opacity: 0 }}
-                    transition={{ duration: 0.2 }} 
+                    transition={{ duration: 0.2 }}
                 >
                     {selectedTab ? selectedTab.body : "😋"}
                 </motion.div>
@@ -56,18 +60,18 @@ export default function SharedLayoutAnimation() {
 
         </div>
     )
-} 
+}
 
- 
+
 
 const shared_section = [
     {
-        title: "Proyectos Relevantes", 
-        body: "Proyectos" 
+        title: "Proyectos Relevantes",
+        body: <ProyectTab />
     },
-    { 
+    {
         title: "Conocimiento Técnico",
-        body: <TecnicalTab/>
+        body: <TecnicalTab />
     },
 ]
 
