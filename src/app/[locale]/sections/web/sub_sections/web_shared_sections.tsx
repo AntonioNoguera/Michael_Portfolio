@@ -2,8 +2,8 @@
 
 import { AnimatePresence } from "motion/react"
 import * as motion from "motion/react-client"
-import { useState } from "react"
-import AboutMe from "../../../about_me/about_me"
+import { useState } from "react" 
+import TecnicalTab from "./tecnical_knowledge/tecnical_tab"
 
 export default function SharedLayoutAnimation() {
     const [selectedTab, setSelectedTab] = useState(tabs[0])
@@ -29,7 +29,7 @@ export default function SharedLayoutAnimation() {
                             className= {tabClass}
                             onClick= {() => setSelectedTab(item)}>
 
-                            ${item.title}
+                            {item.title}
 
                             {
                                 item === selectedTab ? (
@@ -48,8 +48,7 @@ export default function SharedLayoutAnimation() {
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -10, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    style={icon}
+                    transition={{ duration: 0.2 }} 
                 >
                     {selectedTab ? selectedTab.body : "😋"}
                 </motion.div>
@@ -59,18 +58,16 @@ export default function SharedLayoutAnimation() {
     )
 } 
 
-const icon: React.CSSProperties = {
-    fontSize: 128,
-}
+ 
 
 const shared_section = [
-    { 
-        title: "Proyectos", 
+    {
+        title: "Proyectos Relevantes", 
         body: "Proyectos" 
     },
     { 
-        title: "Habillidades",
-        body: <AboutMe/>
+        title: "Conocimiento Técnico",
+        body: <TecnicalTab/>
     },
 ]
 
