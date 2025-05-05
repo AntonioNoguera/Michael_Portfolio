@@ -12,10 +12,11 @@ type LanguageCardProps = {
 
 export default function LanguageCard({ image, label, className = '' }: LanguageCardProps) {
     return (
-        <motion.div
+        <div className=' mx-11 my-10'>
+<motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className={`py-5 m-11  cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
+            className={`py-5  cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
             <Image
                 src={image}
                 alt={label}
@@ -29,5 +30,7 @@ export default function LanguageCard({ image, label, className = '' }: LanguageC
             />
             <p className={`text-center text-h2 -mb-4 font-semibold ${className}`}>{label}</p>
         </motion.div>
+        </div>
+         
     );
 }

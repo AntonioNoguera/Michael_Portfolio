@@ -22,24 +22,26 @@ html {
    0% {
       background-position: 0% 50%;
    }
+
    50% {
       background-position: 100% 50%;
    }
+
    100% {
       background-position: 0% 50%;
    }
 }
 
 .kotlin-header {
-   background: #C757BB;
-   background: linear-gradient(to right, #C757BB 0%, #F88909 100%);
+   background: #3DDC84;
+   background: linear-gradient(31deg, rgba(61, 220, 132, 1) 0%, rgb(24, 136, 74) 55%);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
 .swift-header {
-   background: #F15034;
-   background: linear-gradient(to right, #F15034 0%, #F9A941 100%);
+   background: #7d7d7d;
+   background: linear-gradient(164deg, rgba(125, 125, 125, 1) 0%, rgba(214, 206, 206, 1) 85%);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
@@ -57,7 +59,7 @@ html {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
- 
+
 .programming-languages-header {
    background: #2D639E;
    background: linear-gradient(to bottom, #2D639E 0%, #666666 100%);
@@ -104,11 +106,12 @@ html {
 
 @media (min-height: 800px) {
    .br-tall {
-     display: inline;
+      display: inline;
    }
- }
- @media (max-height: 799px) {
+}
+
+@media (max-height: 799px) {
    .br-tall {
-     display: none;
+      display: none;
    }
- }
+}

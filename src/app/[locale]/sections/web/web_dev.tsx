@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-import { Modal } from "@/components/Modal"; 
 import SharedLayoutAnimation from "./sub_sections/web_shared_sections";
 
 export default function WebSection() {

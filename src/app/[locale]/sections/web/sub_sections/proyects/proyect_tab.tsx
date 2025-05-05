@@ -1,5 +1,7 @@
 'use client';
 
+import ProjectCard from "./components/proyect_card";
+
 type Project = {
     id: string;
     name: string;
@@ -30,16 +32,12 @@ const mockProjects: Project[] = [
 
 export default function ProyectTab() {
     return (
-        <div className="space-y-4 w-full">
-            {mockProjects.map((project) => (
-                <div key={project.id} className="border  w-full p-4 rounded-md shadow">
-                    <h2 className="text-xl font-semibold">{project.name}</h2>
-                    <p className="text-gray-600">{project.description}</p>
-                    <span className="text-sm text-blue-600 capitalize">
-                        Plataforma: {project.platform}
-                    </span>
-                </div>
-            ))}
+        <div className="space-y-4 w-full pt-6 ">
+            {
+                mockProjects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                ))
+            }
         </div>
     );
 }

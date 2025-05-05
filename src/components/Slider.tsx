@@ -5,7 +5,7 @@ import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
 const animation = {
-    duration: 50000,
+    duration: 30000,
     easing: (t: number) => t,
 };
 
@@ -17,22 +17,11 @@ type AutoScrollCarouselProps = {
 export default function AutoScrollCarousel({ items, className }: AutoScrollCarouselProps) {
     const [sliderRef] = useKeenSlider<HTMLDivElement>({
         slides: {
-            perView: 1,
+            perView: 3,
             spacing: 30
         },
         breakpoints: {
-            "(min-width: 640px)": {
-                slides: {
-                    perView: 2,
-                    spacing: 30,
-                },
-            },
-            "(min-width: 1024px)": {
-                slides: {
-                    perView: 3,
-                    spacing: 30,
-                },
-            }
+            
         },
         loop: true,
         renderMode: 'precision',
