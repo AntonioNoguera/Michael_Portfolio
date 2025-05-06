@@ -7,6 +7,7 @@ import cbtis from '@png_assets/LOGO_CBTIS.png';
 import uanl from '@png_assets/LOGO_UANL.png';
 import fime from '@png_assets/LOGO_FIME.png';
 import ef from '@svg_assets/svg_enviaflores.svg';
+
 import android from '@svg_assets/svg_android.svg';
 import ios from '@svg_assets/svg_apple.svg';
 

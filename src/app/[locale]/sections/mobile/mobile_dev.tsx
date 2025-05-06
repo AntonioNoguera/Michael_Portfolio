@@ -1,9 +1,11 @@
 import Slider from "@/components/Slider";
 
-import kotlin from '@png_assets/LOGO_ANDROID.png'
+import android from '@png_assets/LOGO_ANDROID.png'
+import kotlin from '@png_assets/LOGO_KOTLIN.png'
+
 import swift from '@png_assets/LOGO_APPLE.png'
 import dart from '@png_assets/LOGO_TEST.png'
-import ionic from '@png_assets/LOGO_IONIC.png'
+
 
 import LanguageCard from "./components/language_card";
 import { useTranslations } from "next-intl";
@@ -14,10 +16,9 @@ export default function MobileDev() {
     const t = useTranslations('Mobile_Section');
 
     const languages = [
-        <LanguageCard key="kotlin" image={kotlin} label="Android" className="kotlin-header" />,
-        <LanguageCard key="swift" image={swift} label="iOS (iPhone)" className="swift-header" />,
-        <LanguageCard key="dart" image={dart} label="Multiplatform" className="dart-header" />,
-        <LanguageCard key="dart" image={dart} label="Multiplatform" className="dart-header" />
+        <LanguageCard key="kotlin" image={android} languageImage={kotlin} label="Android" className="kotlin-header" />,
+        <LanguageCard key="swift" image={swift} languageImage={android} label="iOS (iPhone)" className="swift-header" />,
+        <LanguageCard key="dart" image={dart} languageImage={android} label="Multiplatform" className="dart-header" />
     ];
 
     return (

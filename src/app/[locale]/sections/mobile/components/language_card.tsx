@@ -6,31 +6,45 @@ import React from 'react';
 
 type LanguageCardProps = {
     image: StaticImageData | string;
+    languageImage: StaticImageData | string;
     label: string;
     className?: string;
 };
 
-export default function LanguageCard({ image, label, className = '' }: LanguageCardProps) {
+export default function LanguageCard({ image, languageImage, label, className = '' }: LanguageCardProps) {
     return (
         <div className=' mx-11 my-10'>
-<motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className={`py-5  cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
-            <Image
-                src={image}
-                alt={label}
-                className="pb-2 "
-                style={{
-                    height: '20vh',
-                    width: 'auto',
-                }}
-                height={180}
+            <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className={`py-5  cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
+                <Image
+                    src={image}
+                    alt={label}
+                    className="pb-2 "
+                    style={{
+                        height: '20vh',
+                        width: 'auto',
+                    }}
+                    height={180}
+                />
+                <div className='w-full items-center justify-center flex flex-row gap-2'>
+                    <p className={`text-center text-h2 -mb-4 font-semibold ${className}`}>{label}</p>
 
-            />
-            <p className={`text-center text-h2 -mb-4 font-semibold ${className}`}>{label}</p>
-        </motion.div>
+                    <Image
+                        src={languageImage}
+                        alt={label}
+                        className="pb-2 "
+                        style={{
+                            height: 'auto',
+                            width: '25px',
+                        }}
+                        height={180}
+                    />
+
+                </div>
+            </motion.div>
         </div>
-         
+
     );
 }

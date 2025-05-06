@@ -28,6 +28,12 @@ const mockProjects: Project[] = [
         description: 'Desarrollada con Flutter, funciona en Android y iOS.',
         platform: 'multiplatform',
     },
+    {
+        id: '4',
+        name: 'Mi App Multiplataforma',
+        description: 'Desarrollada con Flutter, funciona en Android y iOS.',
+        platform: 'multiplatform',
+    }, 
 ];
 
 export default function ProyectTab() {
