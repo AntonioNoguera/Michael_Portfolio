@@ -3,8 +3,11 @@ import Slider from "@/components/Slider";
 import android from '@png_assets/LOGO_ANDROID.png'
 import kotlin from '@png_assets/LOGO_KOTLIN.png'
 
-import swift from '@png_assets/LOGO_APPLE.png'
-import dart from '@png_assets/LOGO_TEST.png'
+import ios from '@png_assets/LOGO_APPLE.png'
+import swift from '@png_assets/Swift.png'
+
+import mult from '@png_assets/LOGO_Multiplatform.png'
+import flutter from '@png_assets/LOGO_DART.png'
 
 
 import LanguageCard from "./components/language_card";
@@ -17,8 +20,8 @@ export default function MobileDev() {
 
     const languages = [
         <LanguageCard key="kotlin" image={android} languageImage={kotlin} label="Android" className="kotlin-header" />,
-        <LanguageCard key="swift" image={swift} languageImage={android} label="iOS (iPhone)" className="swift-header" />,
-        <LanguageCard key="dart" image={dart} languageImage={android} label="Multiplatform" className="dart-header" />
+        <LanguageCard key="swift" image={ios} languageImage={swift} label="iOS (iPhone)" className="swift-header" />,
+        <LanguageCard key="dart" image={mult} languageImage={flutter} label="Multiplatform" className="dart-header" />
     ];
 
     return (

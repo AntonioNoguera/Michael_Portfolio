@@ -27,6 +27,7 @@ module.exports = {
         'body': ['1.20rem'],
         'body2': ['1.340rem'],
         'body1':  ['1.70rem'],
+        'h3': ['1.80rem'],
         'h2': ['1.95rem'],
         'huge': ['10rem', { lineHeight: '9rem' }],
         'page_title' : ['20vh', { lineHeight: '18vh'}]

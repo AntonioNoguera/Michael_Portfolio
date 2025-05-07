@@ -18,6 +18,9 @@ export default function LanguageCard({ image, languageImage, label, className = 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 className={`py-5  cursor-pointer flex flex-col justify-center items-center bg-white_primary shadow-std rounded-xl`}>
+
+                <p className={`text-center text-h2 font-semibold ${className}`}>{label}</p>
+
                 <Image
                     src={image}
                     alt={label}
@@ -30,17 +33,18 @@ export default function LanguageCard({ image, languageImage, label, className = 
                 />
                 <div className='w-full items-center justify-center -mb-3 flex flex-row gap-x-2'>
 
-                    <p className={`text-center text-h2 font-semibold ${className}`}>{label}</p>
+                <span className={`tfont-medium text-h3  ${className}`}>usando</span>
 
                     <Image
                         src={languageImage}
-                        alt={label} 
+                        alt={label}
                         style={{
                             height: 'auto',
                             width: '25px',
                         }}
                         height={180}
                     />
+ 
 
                 </div>
             </motion.div>
