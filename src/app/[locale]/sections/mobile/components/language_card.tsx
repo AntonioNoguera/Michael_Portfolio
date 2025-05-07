@@ -28,13 +28,13 @@ export default function LanguageCard({ image, languageImage, label, className = 
                     }}
                     height={180}
                 />
-                <div className='w-full items-center justify-center flex flex-row gap-2'>
-                    <p className={`text-center text-h2 -mb-4 font-semibold ${className}`}>{label}</p>
+                <div className='w-full items-center justify-center -mb-3 flex flex-row gap-x-2'>
+
+                    <p className={`text-center text-h2 font-semibold ${className}`}>{label}</p>
 
                     <Image
                         src={languageImage}
-                        alt={label}
-                        className="pb-2 "
+                        alt={label} 
                         style={{
                             height: 'auto',
                             width: '25px',
