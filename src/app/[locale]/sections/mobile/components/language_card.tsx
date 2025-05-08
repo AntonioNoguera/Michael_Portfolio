@@ -12,6 +12,9 @@ type LanguageCardProps = {
 };
 
 export default function LanguageCard({ image, languageImage, label, className = '' }: LanguageCardProps) {
+
+    const withLabelStyle: string = "text-black_primary";
+
     return (
         <div className=' mx-11 my-10'>
             <motion.div
@@ -33,18 +36,17 @@ export default function LanguageCard({ image, languageImage, label, className = 
                 />
                 <div className='w-full items-center justify-center -mb-3 flex flex-row gap-x-2'>
 
-                <span className={`tfont-medium text-h3  ${className}`}>usando</span>
+                <span className={`font-medium text-body1  ${className} text-black_primary`}>usando</span>
 
                     <Image
                         src={languageImage}
                         alt={label}
                         style={{
-                            height: 'auto',
-                            width: '25px',
+                            height: '25px',
+                            width: 'auto',
                         }}
                         height={180}
                     />
- 
 
                 </div>
             </motion.div>

@@ -11,9 +11,28 @@ import ef from '@svg_assets/svg_enviaflores.svg';
 import android from '@svg_assets/svg_android.svg';
 import ios from '@svg_assets/svg_apple.svg';
 
+import ProfessionalExperienceItem, { ProfessionalExperienceProps } from './components/professional_experience_item';
+
 export default function AboutMe() {
     const t = useTranslations('About_Me_Section');
     const c = useTranslations('Commons');
+
+    const professionalExperience: ProfessionalExperienceProps[] = [
+        {
+            companyIcon: ef,
+            companyName: t('enviaflores_name'),
+            companyPeriod: t('internship_period'),
+            position: t('android_intern'),
+            positionIcon: android,
+        },
+        {
+            companyIcon: ef,
+            companyName: t('enviaflores_name'),
+            companyPeriod: t('fulltime_period'),
+            position: t('ios_developer'),
+            positionIcon: ios,
+        },
+    ]
 
     return (
         <section id="about" className="min-h-screen text-primary snap-start box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14  pb-16 sm:pb-0">
@@ -80,32 +99,10 @@ export default function AboutMe() {
                         <div className="mb-10 sm:mb-0">
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-center text-black_primary">{t('professional_experiencie_title')}</h2>
 
-                            <div className="shadow-std rounded-xl bg-white_primary px-3 py-3">
-                                {/* Prácticas */}
-                                <div className="flex flex-row justify-between items-center gap-2 mb-4">
-                                    <div className="flex items-center gap-2">
-                                        <Image src={ef} alt="Enviaflores" width={25} height={25} />
-                                        <strong>{t('enviaflores_name')}</strong>
-                                        <span className="hidden md:block">{t('internship_period')}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 justify-center md:justify-end mt-1 md:mt-0">
-                                        <span>{t('android_intern')}</span>
-                                        <Image src={android} alt="Android" width={25} height={25} />
-                                    </div>
-                                </div>
-
-                                {/* Tiempo completo */}
-                                <div className="flex flex-row justify-between items-center gap-2">
-                                    <div className="flex items-center gap-2">
-                                        <Image src={ef} alt="Enviaflores" width={25} height={25} />
-                                        <strong>{t('enviaflores_name')}</strong>
-                                        <span className="hidden md:block">{t('fulltime_period')}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 justify-center md:justify-end mt-1 md:mt-0">
-                                        <span>{t('ios_developer')}</span>
-                                        <Image src={ios} alt="Apple" width={25} height={25} />
-                                    </div>
-                                </div>
+                            <div className="flex flex-col gap-y-3 shadow-std rounded-xl bg-white_primary px-3 py-3"> 
+                                {professionalExperience.map((item, index) => (
+                                    <ProfessionalExperienceItem {...item} key={index}/>
+                                ))}
                             </div>
                         </div>
                     </div>
