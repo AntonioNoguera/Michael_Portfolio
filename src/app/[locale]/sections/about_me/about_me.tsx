@@ -7,6 +7,8 @@ import cbtis from '@png_assets/LOGO_CBTIS.png';
 import uanl from '@png_assets/LOGO_UANL.png';
 import fime from '@png_assets/LOGO_FIME.png';
 import ef from '@svg_assets/svg_enviaflores.svg';
+import pacific from '@png_assets/LOGO_PACIFIC.png';
+import logistic from '@png_assets/LOGISTIC_ICON.png';
 
 import android from '@svg_assets/svg_android.svg';
 import ios from '@svg_assets/svg_apple.svg';
@@ -18,6 +20,13 @@ export default function AboutMe() {
     const c = useTranslations('Commons');
 
     const professionalExperience: ProfessionalExperienceProps[] = [
+        {
+            companyIcon: pacific,
+            companyName: t('pacific_name'),
+            companyPeriod: t('offside_period'),
+            position: t('logistic_charge'),
+            positionIcon: logistic,
+        },
         {
             companyIcon: ef,
             companyName: t('enviaflores_name'),
@@ -70,26 +79,19 @@ export default function AboutMe() {
                                 {/* Técnico */}
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
                                     <p className="mb-2">{t('tecnitian')}</p>
-                                    <div className="flex justify-evenly pb-1 px-10">
-                                        <div className="h-12 sm:h-16 md:h-20 w-auto">
-                                            <Image src={dgti} alt="DGTI" className="h-full w-auto" />
-                                        </div>
-                                        <div className="h-12 sm:h-16 md:h-20 w-auto">
-                                            <Image src={cbtis} alt="CBTIS" className="h-full w-auto" />
-                                        </div>
+                                    <div className="flex justify-evenly pb-1 px-10"> 
+                                        <Image src={dgti} alt="DGTI" className="w-auto h-[13vh]" /> 
+                                        <Image src={cbtis} alt="CBTIS" className="w-auto h-[13vh]" /> 
                                     </div>
                                 </div>
 
                                 {/* Ingeniería */}
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
                                     <p className="mb-2">{t('engineer')}</p>
-                                    <div className="flex justify-evenly px-10 pb-1">
-                                        <div className="h-12 sm:h-16 md:h-20 w-auto">
-                                            <Image src={uanl} alt="UANL" className="h-full w-auto" />
-                                        </div>
-                                        <div className="h-12 sm:h-16 md:h-20 w-auto">
-                                            <Image src={fime} alt="FIME" className="h-full w-auto" />
-                                        </div>
+                                    <div className="flex justify-evenly px-10 pb-1"> 
+                                        <Image src={uanl} alt="UANL" className="w-auto h-[13vh]" />
+
+                                        <Image src={fime} alt="FIME" className="w-auto h-[13vh]" /> 
                                     </div>
                                 </div>
                             </div>
@@ -99,9 +101,9 @@ export default function AboutMe() {
                         <div className="mb-10 sm:mb-0">
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-center text-black_primary">{t('professional_experiencie_title')}</h2>
 
-                            <div className="flex flex-col gap-y-3 shadow-std rounded-xl bg-white_primary px-3 py-3"> 
+                            <div className="flex flex-col gap-y-3 shadow-std rounded-xl bg-white_primary px-3 py-3">
                                 {professionalExperience.map((item, index) => (
-                                    <ProfessionalExperienceItem {...item} key={index}/>
+                                    <ProfessionalExperienceItem {...item} key={index} />
                                 ))}
                             </div>
                         </div>

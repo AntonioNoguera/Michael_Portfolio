@@ -13,16 +13,20 @@
     "contact_me": "Contact Me"
   },
   "About_Me_Section": {
-    "description": "Hi, I'm Michael Noguera, a software engineer passionate about creating solutions that connect design and functionality. I love mobile development and I'm always looking to learn new things.",
-    "vocational_training_title": "Vocational Training",
-    "tecnitian": "Computer Programming Technician",
-    "engineer": "Software Technology Engineer",
-    "professional_experiencie_title": "Professional Experience",
-    "enviaflores_name": "enviaflores.com",
+    "description": "Hi, I'm Michael Noguera, a software engineer passionate about creating solutions that blend design and functionality. I love mobile development and I'm always eager to learn new things.",
     "android_intern": "Android Intern",
+    "enviaflores_name": "EnviaFlores.com",
+    "engineer": "Software Technology Engineer",
+    "fulltime_period": "Mar 2025 - Present",
+    "internship_period": "Nov 2024 - Mar 2025",
     "ios_developer": "iOS Developer",
-    "internship_period": "Nov 24 - March 25",
-    "fulltime_period": "Mar 25 - Present"
+    "logistic_charge": "Warehouse and Logistics Manager",
+    "offside_period": "Aug 2023 - Nov 2025",
+    "pacific_name": "Comedores Industriales del Pacífico",
+    "pacific_place": "Android Intern",
+    "professional_experiencie_title": "Professional Experience",
+    "tecnitian": "Programming Technician",
+    "vocational_training_title": "Academic Development"
   },
   "Mobile_Section": {
     "title": "Mobile \nDevelopment",
