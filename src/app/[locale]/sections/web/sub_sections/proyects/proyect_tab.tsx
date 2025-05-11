@@ -33,12 +33,12 @@ const mockProjects: Project[] = [
         name: 'Plataforma de gestión de almacenes especializado',
         description: '',
         platform: 'React JS - Bootstrap - Front Arq - ',
-    }, 
+    },
 ];
 
 export default function ProyectTab() {
     return (
-        <div className="space-y-4 w-full pt-6 ">
+        <div className="grid grid-cols-2 gap-y-4 gap-x-4 pt-3 w-full h-full">
             {
                 mockProjects.map((project) => (
                     <ProjectCard key={project.id} project={project} />

@@ -24,13 +24,13 @@ export default function AutoScrollCarousel({ items, className }: AutoScrollCarou
             spacing: 30,
         },
         breakpoints: {
-            "(max-width: 768px)": {
+            "(max-width: 1200px)": {
                 slides: {
                     perView: 2,
                     spacing: 15,
                 }
             },
-            "(max-width: 480px)": {
+            "(max-width: 768px)": {
                 slides: {
                     perView: 1,
                     spacing: 10,

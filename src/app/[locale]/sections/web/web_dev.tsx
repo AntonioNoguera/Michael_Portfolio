@@ -10,7 +10,7 @@ export default function WebSection() {
     const t = useTranslations('Web_Section');
 
     return (
-        <section id="web" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-16 pb-20 md:pb-0">
+        <section id="web" className="min-h-screen  md:h-screen snap-start bg-secondary flex flex-col items-center justify-center py-16  md:pb-0">
             
             <p className="text-5xl md:text-8xl lg:text-page_title font-bold text-center text-black_primary px-4 md:px-6 transition-all duration-300 mt-4 lg:mt-0">
                 {
