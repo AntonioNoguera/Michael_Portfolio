@@ -4,7 +4,7 @@ type Project = {
   id: string;
   name: string;
   description: string;
-  platform: 'android' | 'ios' | 'multiplatform';
+  platform: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {

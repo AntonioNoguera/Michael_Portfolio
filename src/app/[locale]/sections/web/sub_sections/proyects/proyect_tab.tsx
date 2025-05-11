@@ -6,33 +6,33 @@ type Project = {
     id: string;
     name: string;
     description: string;
-    platform: 'android' | 'ios' | 'multiplatform';
+    platform: string;
 };
 
 const mockProjects: Project[] = [
     {
         id: '1',
-        name: 'Mi App Android',
-        description: 'Una app para Android enfocada en ecommerce.',
-        platform: 'android',
+        name: 'Plataforma de predicción de paro cardiacos',
+        description: '',
+        platform: 'html - vanilla js - - python - sklearn - bootstrap',
     },
     {
         id: '2',
-        name: 'Mi App iOS',
-        description: 'Una app nativa para iOS con SwiftUI.',
-        platform: 'ios',
+        name: 'Simulación avanzada empleando numeros aleatorios',
+        description: '',
+        platform: 'vanilla js - html - bootstrap',
     },
     {
         id: '3',
-        name: 'Mi App Multiplataforma',
-        description: 'Desarrollada con Flutter, funciona en Android y iOS.',
-        platform: 'multiplatform',
+        name: 'Platforma de manejo privado de archivos PDF',
+        description: '',
+        platform: 'python - eel - html - tailwind - vanilla js - mysql',
     },
     {
         id: '4',
-        name: 'Mi App Multiplataforma',
-        description: 'Desarrollada con Flutter, funciona en Android y iOS.',
-        platform: 'multiplatform',
+        name: 'Plataforma de gestión de almacenes especializado',
+        description: '',
+        platform: 'React JS - Bootstrap - Front Arq - ',
     }, 
 ];
 
