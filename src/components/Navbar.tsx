@@ -30,10 +30,13 @@ export default function Navbar() {
     setTimeout(() => setIsMenuOpen(false), 150);
   };
 
+  const hrefClass: string = "hover:text-secondary relative group w-full";
+  const spanClass: string = "absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full";
+
   return (
-    <nav className="fixed top-0 z-10 opacity-90 w-full bg-primary shadow text-white_primary">
-      <div className="px-4 py-4 flex justify-between items-center">
-        <div className='flex space-x-4'>
+    <nav className="  bg-primary shadow text-white_primary text-center">
+      <div className="px-4 py-4 h-full flex flex-col justify-around items-center">
+        <div className='flex flex-col w-full items-center'>
           <Image
             src={github_logo}
             alt="Una descripción de la imagen"
@@ -41,10 +44,10 @@ export default function Navbar() {
             height={30}
             className="hover:scale-110 transition-transform duration-300"
           />
-          <span className="text-xl font-bold">{t('dev_name')}</span>
+          <span className="text-l font-bold italic">{t('dev_name')}</span>
         </div>
 
-        {/* Menu Hamburgesa */}
+        {/* Menu Hamburgesa
         <button
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative focus:outline-none"
           onClick={toggleMenu}
@@ -53,32 +56,31 @@ export default function Navbar() {
           <span className={`absolute block w-6 h-0.5 bg-white_primary transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 top-4' : 'top-2'}`}></span>
           <span className={`absolute block w-6 h-0.5 bg-white_primary transition-all duration-300 ease-in-out top-4 ${isMenuOpen ? 'opacity-0 -translate-x-2' : 'opacity-100'}`}></span>
           <span className={`absolute block w-6 h-0.5 bg-white_primary transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 top-4' : 'top-6'}`}></span>
-        </button>
+        </button> */}
 
         {/* Escritorio */}
-        <div className="hidden md:flex items-center">
-          <div className="space-x-8 mr-6">
-            <a href="#about" className="hover:text-secondary relative group">
+        <div className="hidden md:flex flex-col gap-8 items-center text-center w-full"> 
+            <a href="#about" className={hrefClass}>
               {t('about_me')}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
+              <span className={spanClass}></span>
             </a>
-            <a href="#mobile" className="hover:text-secondary relative group">
+            <a href="#mobile" className={hrefClass}>
               {t('mobile_section')}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
+              <span className={spanClass}></span>
             </a>
-            <a href="#web" className="hover:text-secondary relative group">
+            <a href="#web" className={hrefClass}>
               {t('web_section')}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
+              <span className={spanClass}></span>
             </a>
-            <a href="#contact" className="hover:text-secondary relative group">
+            <a href="#contact" className={hrefClass}>
               {t('contact_me')}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
+              <span className={spanClass}></span>
+            </a> 
           </div>
 
           <button
             onClick={handleLanguageChange}
-            className="px-3 py-1 rounded bg-white_primary text-primary hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="px-3 py-1 mt-4 rounded w-full justify-center flex bg-white_primary text-primary hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
           >
             <Image
               src={locale === 'es' ? english_flag : spanish_flag}
@@ -88,10 +90,10 @@ export default function Navbar() {
               className="transition-transform hover:rotate-3"
             />
           </button>
-        </div>
+  
       </div>
 
-      {/* Movil */}
+      {/* Movil
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           } bg-primary shadow-md`}
@@ -140,7 +142,7 @@ export default function Navbar() {
             <span>{locale === 'es' ? 'English' : 'Español'}</span>
           </button>
         </div>
-      </div>
+      </div> */}
     </nav>
   )
 }

@@ -40,20 +40,20 @@ export default async function LocaleLayout({ children, params }: Props) {
             </head>
             <body className={`${raleway.variable} font-sans`}>
                 <div className='flex'>
-                    <div className='bg-primary opacity-90 w-20'>
-                        
-                    </div>
+
 
                     <NextIntlClientProvider locale={locale} messages={messages}>
-                         
+ 
+                        <VideoBackgroundWrapper> 
+                        <Navbar />
                         <main className='block w-full h-full overflow-auto'>
                             {children}
-                        </main> 
+                        </main>
+                        </VideoBackgroundWrapper>
                     </NextIntlClientProvider>
 
                     {/* <NextIntlClientProvider locale={locale} messages={messages}>
-                        <VideoBackgroundWrapper>
-                            <Navbar />
+                        <VideoBackgroundWrapper> 
                             <main className='flex-none'>
                                 {children}
                             </main>

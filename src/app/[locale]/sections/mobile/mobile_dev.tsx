@@ -25,7 +25,7 @@ export default function MobileDev() {
     ];
 
     return (
-        <section id="mobile" className="min-h-screen snap-start bg-secondary flex flex-col items-center justify-center pt-14">
+        <section id="mobile" className="min-h-screen snap-start bg-secondary flex flex-col items-center justify-center">
             <p className="text-6xl md:text-8xl lg:text-page_title font-bold text-center px-4 md:px-6 transition-all duration-300 mt-4 lg:mt-0 mobile-header ">
                 {
                     t('title').split('\n').map((line, index) => (
