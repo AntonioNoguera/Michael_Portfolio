@@ -4,7 +4,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { Raleway } from 'next/font/google'
 
-import Navbar from '@components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 
 import '../../styles/styles.css'
 import { routing } from '@/i18n/routing';
