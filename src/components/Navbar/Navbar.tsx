@@ -12,7 +12,9 @@ import contact_logo from '@svg_assets/navbar/svg_contact_me_icon.svg';
 
 import spanish_flag from '@png_assets/FLAG_SPANISH.png';
 import english_flag from '@png_assets/FLAG_ENGLISH.png';
- 
+import React from 'react';
+
+import ReactMarkdown from 'react-markdown';
 
 
 interface NavItemData extends Omit<NavItemProps, 'hrefClass' | 'spanClass'> {
@@ -22,7 +24,7 @@ interface NavItemData extends Omit<NavItemProps, 'hrefClass' | 'spanClass'> {
 const Navbar: React.FC = () => {
   const t = useTranslations('Navbar');
   const locale = useLocale();
-  const router = useRouter(); 
+  const router = useRouter();
 
   const handleLanguageChange = (): void => {
     const newLocale = locale === 'es' ? 'en' : 'es';
@@ -40,12 +42,18 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-primary shadow text-white_primary text-center">
-      <div className="py-4 px-2 h-full flex flex-col justify-around items-center">
-        <div className='w-full'> 
-          <span className="text-sm font-bold italic">{t('dev_name') + "'s Portfolio"}</span>
+      <div className=" h-full flex flex-col justify-between items-center">
+        <div className='w-full flex flex-col text-sm italic py-14 -mb-14 bg-slate-400 -mx-2 bg-fade-top-down'>
+          <ReactMarkdown
+            components={{
+              p: ({ children }) => <span>{children}</span>,
+            }}
+          >
+            {t('title')}
+          </ReactMarkdown>
         </div>
- 
-        <div className="hidden md:flex flex-col gap-8 items-center text-center w-full">
+
+        <div className="flex flex-col gap-8 items-center text-center w-full px-2 p ">
           {navItems.map((item) => (
             <NavItem
               key={item.id}
@@ -58,7 +66,7 @@ const Navbar: React.FC = () => {
 
         <button
           onClick={handleLanguageChange}
-          className="px-10 py-1 mt-4 rounded justify-center flex bg-white_primary text-primary hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
+          className="px-8 mb-10 py-1 rounded flex bg-white_primary  hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
         >
           <Image
             src={locale === 'es' ? english_flag : spanish_flag}

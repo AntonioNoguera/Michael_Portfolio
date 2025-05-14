@@ -77,22 +77,26 @@ export default function AboutMe() {
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-black_primary text-center">{t('vocational_training_title')}</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Técnico */}
-                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center flex flex-col justify-around">
-                                    <p className="mb-2">{t('tecnitian')}</p>
-                                    <div className="flex justify-evenly pb-1 px-10"> 
-                                        <Image src={dgti} alt="DGTI" className="w-auto h-[13vh]" /> 
-                                        <Image src={cbtis} alt="CBTIS" className="w-auto h-[13vh]" /> 
+                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
+
+                                    <div className="flex justify-evenly pb-1 px-10">
+                                        <Image src={dgti} alt="DGTI" className="w-auto h-[13vh]" />
+                                        <Image src={cbtis} alt="CBTIS" className="w-auto h-[13vh]" />
                                     </div>
+                                    <p className=" pt-2 -mb-2">{t('tecnitian')}</p>
                                 </div>
 
                                 {/* Ingeniería */}
-                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
-                                    <p className="mb-2">{t('engineer')}</p>
-                                    <div className="flex justify-evenly px-10 pb-1"> 
+                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
+                                    <div className="flex justify-evenly px-10 pb-1">
                                         <Image src={uanl} alt="UANL" className="w-auto h-[13vh]" />
 
-                                        <Image src={fime} alt="FIME" className="w-auto h-[13vh]" /> 
+                                        <Image src={fime} alt="FIME" className="w-auto h-[13vh]" />
+
+
                                     </div>
+
+                                    <p className=" pt-2 -mb-2">{t('engineer')}</p>
                                 </div>
                             </div>
                         </div>
