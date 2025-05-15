@@ -44,7 +44,7 @@ export default function AboutMe() {
     ]
 
     return (
-        <section id="about" className="min-h-screen text-primary snap-start box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center pt-14  pb-16 sm:pb-0">
+        <section id="about" className="min-h-screen text-primary snap-start box-border flex items-center text-center bg-white_primary bg-opacity-90 justify-center  pb-16 sm:pb-0">
             <div className="w-[95%] flex flex-col sm:flex-row space-x-4 md:space-x-8 lg:space-x-10 items-center justify-center">
                 {/* Foto - adaptada con breakpoints de Tailwind */}
                 <div className="w-[90%] sm:w-1/4 mb-6 md:mb-0 transition-all duration-300 mt-4 sm:mt-0">
@@ -77,22 +77,26 @@ export default function AboutMe() {
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-black_primary text-center">{t('vocational_training_title')}</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Técnico */}
-                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center flex flex-col justify-around">
-                                    <p className="mb-2">{t('tecnitian')}</p>
-                                    <div className="flex justify-evenly pb-1 px-10"> 
-                                        <Image src={dgti} alt="DGTI" className="w-auto h-[13vh]" /> 
-                                        <Image src={cbtis} alt="CBTIS" className="w-auto h-[13vh]" /> 
+                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
+
+                                    <div className="flex justify-evenly pb-1 px-10">
+                                        <Image src={dgti} alt="DGTI" className="w-auto h-[13vh]" />
+                                        <Image src={cbtis} alt="CBTIS" className="w-auto h-[13vh]" />
                                     </div>
+                                    <p className=" pt-2 -mb-2">{t('tecnitian')}</p>
                                 </div>
 
                                 {/* Ingeniería */}
-                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-2 text-center">
-                                    <p className="mb-2">{t('engineer')}</p>
-                                    <div className="flex justify-evenly px-10 pb-1"> 
+                                <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
+                                    <div className="flex justify-evenly px-10 pb-1">
                                         <Image src={uanl} alt="UANL" className="w-auto h-[13vh]" />
 
-                                        <Image src={fime} alt="FIME" className="w-auto h-[13vh]" /> 
+                                        <Image src={fime} alt="FIME" className="w-auto h-[13vh]" />
+
+
                                     </div>
+
+                                    <p className=" pt-2 -mb-2">{t('engineer')}</p>
                                 </div>
                             </div>
                         </div>

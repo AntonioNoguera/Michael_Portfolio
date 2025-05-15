@@ -103,6 +103,10 @@ html {
    background: linear-gradient(to left, #E9E8FF, rgba(255, 255, 255, 0));
 }
 
+.bg-fade-top-down {
+   background: linear-gradient(to bottom, #1d464b 60%, transparent);
+ }
+
 
 @media (min-height: 800px) {
    .br-tall {

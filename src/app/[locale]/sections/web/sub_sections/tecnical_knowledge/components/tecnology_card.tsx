@@ -28,7 +28,7 @@ export default function TecnologyCard({ image, label, classForLabel = '', onClic
                             key={index}
                             src={img}
                             alt={`${label}-${index}`}
-                            className="pb-2 h-[10vh] md:h-[15vh] lg:h-[19vh]"
+                            className="pb-2 h-[9vh] md:h-[13vh] lg:h-[17vh]"
                             style={{ 
                                 width: 'auto',
                             }}

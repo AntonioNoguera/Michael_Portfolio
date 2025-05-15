@@ -4,7 +4,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { Raleway } from 'next/font/google'
 
-import Navbar from '@components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 
 import '../../styles/styles.css'
 import { routing } from '@/i18n/routing';
@@ -22,8 +22,8 @@ type Props = {
 };
 
 export default async function LocaleLayout({ children, params }: Props) {
-    const { locale } = await params; 
-      
+    const { locale } = await params;
+
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
@@ -39,14 +39,27 @@ export default async function LocaleLayout({ children, params }: Props) {
                 <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
             </head>
             <body className={`${raleway.variable} font-sans`}>
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                    <VideoBackgroundWrapper>
+                <div className='flex'>
+
+
+                    <NextIntlClientProvider locale={locale} messages={messages}>
+ 
+                        <VideoBackgroundWrapper> 
                         <Navbar />
-                        <main className="flex-1">
+                        <main className='block w-full h-full overflow-auto'>
                             {children}
                         </main>
-                    </VideoBackgroundWrapper>
-                </NextIntlClientProvider>
+                        </VideoBackgroundWrapper>
+                    </NextIntlClientProvider>
+
+                    {/* <NextIntlClientProvider locale={locale} messages={messages}>
+                        <VideoBackgroundWrapper> 
+                            <main className='flex-none'>
+                                {children}
+                            </main>
+                        </VideoBackgroundWrapper>
+                    </NextIntlClientProvider> */}
+                </div>
             </body>
         </html>
     );
