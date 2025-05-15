@@ -42,8 +42,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-primary shadow text-white_primary text-center">
-      <div className=" h-full flex flex-col justify-between items-center">
-        <div className='w-full flex flex-col text-sm py-14 -mb-14 bg-slate-400 -mx-2 bg-fade-top-down'>
+      <div className=" h-full flex flex-col py-10 justify-between items-center">
+        <div className='w-full flex flex-col justify-items-start text-lg  -mx-2 '>
           <ReactMarkdown
             components={{
               p: ({ children }) => <span>{children}</span>,
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
 
         <button
           onClick={handleLanguageChange}
-          className="px-8 mb-10 py-1 rounded flex bg-white_primary  hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
+          className="px-8 py-1 rounded flex bg-white_primary  hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
         >
           <Image
             src={locale === 'es' ? english_flag : spanish_flag}
