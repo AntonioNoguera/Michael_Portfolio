@@ -8,30 +8,29 @@ type Project = {
     description: string;
     platform: string;
 };
-
 const mockProjects: Project[] = [
     {
         id: '1',
         name: 'Plataforma de predicción de paro cardiacos',
-        description: '',
+        description: 'Sistema que analiza patrones médicos para predecir riesgos de paro cardiaco usando algoritmos de machine learning.',
         platform: 'html - vanilla js - - python - sklearn - bootstrap',
     },
     {
         id: '2',
         name: 'Simulación avanzada empleando numeros aleatorios',
-        description: '',
+        description: 'Aplicación interactiva para simular eventos probabilísticos y analizar resultados mediante modelos estadísticos.',
         platform: 'vanilla js - html - bootstrap',
     },
     {
         id: '3',
         name: 'Platforma de manejo privado de archivos PDF',
-        description: '',
+        description: 'Sistema seguro para unir, almacenar y administrar documentos PDF con control de acceso por roles.',
         platform: 'python - eel - html - tailwind - vanilla js - mysql',
     },
     {
         id: '4',
         name: 'Plataforma de gestión de almacenes especializado',
-        description: '',
+        description: 'Aplicación web para el control de inventario, entradas y salidas de productos con distintos niveles de usuario.',
         platform: 'React JS - Bootstrap - Front Arq - ',
     },
 ];

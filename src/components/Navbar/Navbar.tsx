@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-primary shadow text-white_primary text-center">
       <div className=" h-full flex flex-col justify-between items-center">
-        <div className='w-full flex flex-col text-sm italic py-14 -mb-14 bg-slate-400 -mx-2 bg-fade-top-down'>
+        <div className='w-full flex flex-col text-sm py-14 -mb-14 bg-slate-400 -mx-2 bg-fade-top-down'>
           <ReactMarkdown
             components={{
               p: ({ children }) => <span>{children}</span>,

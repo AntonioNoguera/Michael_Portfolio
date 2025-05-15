@@ -16,8 +16,8 @@ export default function TecnicalTab() {
     const t = useTranslations('Web_Section');
 
     return (
-        <div className='flex flex-col h-full w-full'>
-            <p className="text-sm md:text-body2 text-center px-4  pt-6 text-black_primary">
+        <div className='flex flex-col h-full w-full items-center justify-center'>
+            <p className="text-sm md:text-body2 text-center px-4 flex-1 pt-6 text-black_primary">
                 {t('subtitle')}
             </p>
 
