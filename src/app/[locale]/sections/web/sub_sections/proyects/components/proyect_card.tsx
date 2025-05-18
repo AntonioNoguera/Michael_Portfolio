@@ -1,11 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import myself from '@svg_assets/svg_github.svg';
 import UsedTecnologyItem from './used_technology_item';
 
-type Project = {
+
+import Image, { StaticImageData } from 'next/image';
+
+export type Project = {
   id: string;
+  icon: StaticImageData | string;
   name: string;
   description: string;
   platform: string;
@@ -13,24 +16,25 @@ type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="flex flex-row gap-2 w-full rounded-xl px-4 bg-white shadow"> 
+    <div className="flex flex-row gap-4 w-full rounded-xl px-4 bg-white shadow">
+      <div className='w-1/5 flex flex-col items-center justify-center'>
         <Image
-          src={myself}
+          src={project.icon}
+          className='w-full'
           alt="Una descripción de la imagen"
-          className=' w-[30%]'
-          style={{
-            height: 'auto', 
-            maxWidth: '30%'
-          }}
-        />  
+        />
+      </div>
 
-      <div className="flex flex-col py-4 w-3/4 justify-between gap-12">
-        <div className='flex flex-col gap-4'>
-          <h2 className="text-xl font-semibold">{project.name}</h2>
-          <h2 className="text-md font-regular">{project.description}</h2>
+
+      {/* TODO: Gap a base de breakpoints */}
+      <div className="flex flex-col py-4 w-4/5 justify-between">
+        <div className='flex flex-col gap-2'>
+          <h2 className="text-2xl font-semibold">{project.name}</h2>
+          <span className="text-md font-regular hidden h-sm:inline-flex">{project.description}</span>
+          <span className="text-md font-regular inline-flex h-sm:hidden"> Aplicación web para el control de inventario, entradas y salidas de productos con distintos niveles de usuario. </span>
         </div>
 
-        <div className="flex-row w-full items-center justify-end gap-6 hidden h-sm:visible  h-sm:inline-flex">
+        <div className="flex-row w-full items-center justify-end gap-6 hidden h-sm:inline-flex">
           <div className="font-semibold text-black_primary opacity-85">Empleando: </div>
           <UsedTecnologyItem />
         </div>
