@@ -75,7 +75,7 @@ export default function AboutMe() {
                         {/* Formación académica */}
                         <div className="mb-4 lg:mb-0">
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-black_primary text-center">{t('vocational_training_title')}</h2>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 {/* Técnico */}
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
 

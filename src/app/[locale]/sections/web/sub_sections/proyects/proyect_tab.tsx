@@ -12,7 +12,7 @@ const mockProjects: Project[] = [
     {
         id: '1',
         name: 'Plataforma de predicción de paro cardiacos',
-        description: 'Sistema que analiza patrones médicos para predecir riesgos de paro cardiaco usando algoritmos de machine learning.',
+        description: 'Aplicación web diseñada para asistir en la predicción temprana de paros cardiacos mediante el análisis de datos clínicos. Utiliza algoritmos de machine learning desarrollados con Python y scikit-learn para identificar patrones en los signos vitales y antecedentes médicos del paciente. La plataforma presenta una interfaz sencilla construida con HTML, JavaScript y Bootstrap, permitiendo a los usuarios ingresar datos relevantes y visualizar los resultados de predicción en tiempo real de forma clara y accesible.',
         platform: 'html - vanilla js - - python - sklearn - bootstrap',
     },
     {

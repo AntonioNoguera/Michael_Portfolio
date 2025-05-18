@@ -17,11 +17,11 @@ export default function TecnicalTab() {
 
     return (
         <div className='flex flex-col h-full w-full items-center justify-center'>
-            <p className="text-sm md:text-body2 text-center px-4 flex-1 pt-6 text-black_primary">
+            <p className="text-sm md:text-body2 text-center px-4  pt-6 text-black_primary">
                 {t('subtitle')}
             </p>
 
-            <div className="flex flex-col md:flex-row md:gap-6 flex-wrap w-full justify-around items-strech transition-all duration-300">
+            <div className="flex flex-col md:flex-row py-[5vh] md:gap-6 justify-around  w-full transition-all duration-300">
                 <TecnologyCard
                     key="programming"
                     image={[ts, js]}
@@ -46,6 +46,8 @@ export default function TecnicalTab() {
                     onClick={() => setIsOpen(true)}
                 />
             </div>
+
+
         </div>
     )
 }

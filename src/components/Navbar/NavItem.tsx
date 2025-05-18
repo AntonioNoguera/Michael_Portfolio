@@ -13,7 +13,7 @@ const NavItem: React.FC<NavItemProps> = ({
   icon
 }) => {
   
-  const hrefClass = "hover:text-secondary relative group w-full flex flex-col gap-2 items-center justify-center";
+  const hrefClass = "hover:text-secondary relative group w-full flex flex-col gap-2 items-center justify-center ";
   const spanClass = "absolute -bottom-1 left-0 w-0 h-0.5 bg-white_primary transition-all duration-300 group-hover:w-full";
 
   return (
@@ -26,7 +26,7 @@ const NavItem: React.FC<NavItemProps> = ({
             height: '3vh',
             width: 'auto'
         }}
-          className="hover:scale-110 transition-transform duration-300"
+          className="group-hover:scale-125 transition-transform duration-300"
         />
       )}
       {text}
