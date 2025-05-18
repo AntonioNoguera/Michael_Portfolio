@@ -26,7 +26,7 @@ const NavItem: React.FC<NavItemProps> = ({
             height: '3vh',
             width: 'auto'
         }}
-          className="hover:scale-110 transition-transform duration-300"
+          className="group-hover:scale-110 transition-transform duration-300"
         />
       )}
       {text}

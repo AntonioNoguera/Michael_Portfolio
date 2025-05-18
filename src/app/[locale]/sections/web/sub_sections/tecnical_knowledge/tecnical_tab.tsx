@@ -17,7 +17,7 @@ export default function TecnicalTab() {
 
     return (
         <div className='flex flex-col h-full w-full items-center justify-center'>
-            <p className="text-sm md:text-body2 text-center px-4 flex-1 pt-6 text-black_primary">
+            <p className="text-sm md:text-body2 text-center px-4  pt-6 text-black_primary">
                 {t('subtitle')}
             </p>
 
