@@ -22,6 +22,7 @@ const mockProjects: Project[] = [
         name: 'Simulación avanzada empleando numeros aleatorios 🎲',
         description: 'Aplicación web interactiva diseñada para la simulación avanzada de eventos aleatorios con base en modelos de probabilidad. Permite a los usuarios configurar distintos escenarios probabilísticos, ajustar parámetros estadísticos y observar los resultados en tiempo real mediante visualizaciones gráficas intuitivas.',
         platform: 'vanilla js - html - bootstrap',
+        github_link: 'https://i.imgur.com/4emRN2X.gif'
     },
     // {
     //     id: '3', 
