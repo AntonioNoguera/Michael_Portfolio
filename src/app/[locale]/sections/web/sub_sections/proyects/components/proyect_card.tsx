@@ -3,7 +3,7 @@
 import myself from '@svg_assets/svg_github.svg';
 import UsedTecnologyItem from './used_technology_item';
 
-import github_logo from '@svg_assets/svg_github.svg';
+import github_logo from '@png_assets/github.png';
 
 import Image, { StaticImageData } from 'next/image';
 
@@ -41,11 +41,15 @@ export default function ProjectCard({ project }: { project: Project }) {
             <UsedTecnologyItem />
           </div>
 
-          <div className='flex flex-col items-end  p-2 justify-end bg-[#151B23] rounded-full'>
+          <div className='group flex flex-row items-center bg-[#151B23] rounded-full whitespace-nowrap cursor-pointer transition-all duration-250 p-2 group-hover:px-2 '>
+            <span className="text-white text-sm px-0 group-hover:px-1 transition-all duration-250 max-w-[0px] group-hover:max-w-[300px] opacity-0 group-hover:opacity-100 overflow-hidden">
+              Ver Código
+            </span>
             <Image
-              alt=""
-              className='filter invert'
-              style={{ width: 'auto', height:'200'}}  
+              alt="GitHub"
+              className="flex-shrink-0"
+              width={35}
+              height={35}
               src={github_logo}
             />
           </div>
