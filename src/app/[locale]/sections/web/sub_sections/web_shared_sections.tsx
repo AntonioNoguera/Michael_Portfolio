@@ -49,7 +49,7 @@ export default function SharedLayoutAnimation() {
 
                 <AnimatePresence mode="wait">
                     <motion.div
-                        className="flex items-center mx-20 "
+                        className="flex items-center"
                         key={selectedTab ? selectedTab.title : "empty"}
                         initial={{ y: 10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}

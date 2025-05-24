@@ -8,7 +8,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
-  
+
 
   images: {
     domains: ['localhost'],
@@ -18,9 +18,15 @@ const nextConfig: NextConfig = {
         hostname: 'i.imgur.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/**',
       }
     ]
-    
+
   },
 
   webpack(config: Configuration) {

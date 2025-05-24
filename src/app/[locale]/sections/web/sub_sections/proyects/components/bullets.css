@@ -1,0 +1,13 @@
+.custom-bullet {
+    @apply w-8 h-8 items-center bg-white text-gray-700 rounded-full cursor-pointer transition-all duration-300 mx-2 inline-flex  justify-center text-sm font-semibold;
+    
+}
+
+.custom-bullet-active {
+    @apply bg-primary text-white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.custom-bullet:hover {
+    @apply bg-opacity-80
+}
