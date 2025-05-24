@@ -2,10 +2,13 @@
 
 import ProjectCard, { Project } from "./components/proyect_card";
 
-import heart from '@svg_assets/web-proyects/svg_heart.svg';
-import lock from '@svg_assets/web-proyects/svg_lock.svg';
-import random from '@svg_assets/web-proyects/svg_random.svg';
-import warehouse from '@svg_assets/web-proyects/svg_warehouse.svg';
+import html from '@png_assets/LOGO_HTML.png';
+import js from '@png_assets/LOGO_JS.png';
+import python from '@png_assets/LOGO_Python.png';
+import sklearn from '@png_assets/LOGO_SK_Learn.png';
+import bootstrap from '@png_assets/LOGO_Bootstrap.png';
+import css from '@png_assets/LOGO_CSS.png';
+import { json } from "stream/consumers";
 
 
 const mockProjects: Project[] = [
@@ -22,7 +25,34 @@ const mockProjects: Project[] = [
         name: 'Simulación avanzada empleando numeros aleatorios 🎲',
         description: 'Aplicación web interactiva diseñada para la simulación avanzada de eventos aleatorios con base en modelos de probabilidad. Permite a los usuarios configurar distintos escenarios probabilísticos, ajustar parámetros estadísticos y observar los resultados en tiempo real mediante visualizaciones gráficas intuitivas.',
         platform: 'vanilla js - html - bootstrap',
-        github_link: 'https://i.imgur.com/4emRN2X.gif'
+        github_link: 'https://i.imgur.com/4emRN2X.gif',
+        used_tecnologies: [
+            {
+                id: '0',
+                icon: html,
+                title: 'HTML',
+                description: 'Lenguaje de marcado base para estructurar páginas web.'
+            },
+            {
+                id: '2',
+                icon: js,
+                title: 'JS',
+                description: 'Lenguaje de programación que permite crear interactividad en sitios web.'
+            },
+            {
+                id: '3',
+                icon: css,
+                title: 'CSS',
+                description: 'Lenguaje de estilos utilizado para diseñar y maquetar páginas web.'
+            },
+            {
+                id: '4',
+                icon: bootstrap,
+                title: 'Bootstrap',
+                description: 'Framework CSS que facilita el diseño responsive y componentes reutilizables.'
+            }
+        ]
+
     },
     // {
     //     id: '3', 

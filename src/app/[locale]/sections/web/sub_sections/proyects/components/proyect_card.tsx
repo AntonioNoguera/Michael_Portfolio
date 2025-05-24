@@ -14,6 +14,14 @@ export type Project = {
   description: string;
   platform: string;
   github_link: string;
+  used_tecnologies: UsedTecnology[];
+};
+
+export type UsedTecnology = {
+  id: string;
+  icon: StaticImageData;
+  title: string;
+  description: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -35,25 +43,29 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {/* <div className="flex-row sm:flex-col w-full items-center  justify-end gap-6"> */}
-        <div className='flex flex-row justify-between'>
-          <div className="flex flex-col  flex-grow w-full items-start justify-start gap-2">
-            {/* <div className="font-semibold  text-[2vh] text-black opacity-50 ">Empleando: </div> */}
-            <UsedTecnologyItem />
-          </div>
+        <div>
 
-          <div className='group flex flex-row items-center bg-[#151B23] rounded-full whitespace-nowrap cursor-pointer transition-all duration-250 p-2 group-hover:px-2 '>
-            <span className="text-white text-sm px-0 group-hover:px-1 transition-all duration-250 max-w-[0px] group-hover:max-w-[300px] opacity-0 group-hover:opacity-100 overflow-hidden">
-              Ver Código
-            </span>
-            <Image
-              alt="GitHub"
-              className="flex-shrink-0"
-              width={35}
-              height={35}
-              src={github_logo}
-            />
-          </div>
+          <div className="font-semibold  text-[2vh] text-black opacity-50 ">Empleando: </div>
+          <div className='flex items-center flex-row justify-between'>
+            <div className="flex flex-col  flex-grow w-full items-start justify-start gap-2">
+              <UsedTecnologyItem tecnologies={project.used_tecnologies} />
+            </div>
 
+            <div className='group flex flex-row items-center bg-[#151B23] rounded-full whitespace-nowrap cursor-pointer transition-all duration-350 p-1 group-hover:px-2 '>
+              <span className="text-white text-sm px-0 group-hover:px-1 transition-all duration-350 max-w-[0px] group-hover:max-w-[300px] opacity-0 group-hover:opacity-100 overflow-hidden">
+                Ver Código
+              </span>
+
+              <Image
+                alt="GitHub"
+                className="flex-shrink-0"
+                width={35}
+                height={35}
+                src={github_logo}
+              />
+            </div>
+
+          </div>
         </div>
 
       </div>
