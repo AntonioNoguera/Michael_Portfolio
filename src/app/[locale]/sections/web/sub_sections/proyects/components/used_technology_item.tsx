@@ -8,14 +8,19 @@ export type UsedTecnology = {
     description: string;
 };
 
-export default function UsedTecnologyItem({ tecnologies }: { tecnologies: UsedTecnology[] }) {
+interface UsedTecnologiesProps {
+    proyectId: string;
+    tecnologies: UsedTecnology[];
+}
+
+export default function UsedTechnologyItem({proyectId, tecnologies }: UsedTecnologiesProps) {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
     return (
         <div className="flex flex-row gap-3">
             {tecnologies.map((item, index) => (
                 <div
-                    key={index}
+                    key={proyectId + item.id}
                     className="relative inline-block"
                     onMouseEnter={() => setHoveredItem(item.id)}
                     onMouseLeave={() => setHoveredItem(null)}
@@ -43,7 +48,7 @@ export default function UsedTecnologyItem({ tecnologies }: { tecnologies: UsedTe
                                 </div>
 
                                 <Image
-                                    alt={item.title || 'Technology icon'} 
+                                    alt={item.title || 'Technology icon'}
                                     width={50}
                                     height={0}
                                     src={item.icon}
