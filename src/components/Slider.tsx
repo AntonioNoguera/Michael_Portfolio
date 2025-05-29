@@ -1,67 +1,57 @@
 'use client';
 
-import * as React from 'react';
-import { useKeenSlider } from 'keen-slider/react';
-import 'keen-slider/keen-slider.min.css';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
 
 type AutoScrollCarouselProps = {
     items: React.ReactNode[];
     className?: string;
 };
 
-const animation = {
-    duration: 15000,
-    easing: (t: number) => t,
-};
-
 export default function AutoScrollCarousel({ items, className }: AutoScrollCarouselProps) {
     
-    const duplicatedItems = [...items, ...items, ...items];
+    const duplicatedItems = [...items, ...items];
     
-    const [sliderRef] = useKeenSlider<HTMLDivElement>({
-        slides: {
-            perView: 3,
-            spacing: 30,
-        },
-        breakpoints: {
-            "(max-width: 1200px)": {
-                slides: {
-                    perView: 2,
-                    spacing: 15,
-                }
-            },
-            "(max-width: 768px)": {
-                slides: {
-                    perView: 1,
-                    spacing: 10,
-                }
-            }
-        },
-        loop: true,
-        renderMode: "performance",
-        drag: true,
-        
-        // Configuración para desplazamiento continuo automático
-        
-        created(s) {
-            s.moveToIdx(3, true, animation);
-        },
-        updated(s) {
-            s.moveToIdx(s.track.details.abs + 3, true, animation);
-        },
-        animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 3, true, animation);
-        },
-         
-    });
-
     return (
-        <div ref={sliderRef} className={`keen-slider ${className ?? ''}`}>
+        <Swiper
+            modules={[Autoplay, FreeMode]}
+            spaceBetween={30} 
+            loop={true}
+            grabCursor={true}
+            freeMode={true} 
+
+            speed={1500}
+             autoplay={{      
+                delay: 800,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+                reverseDirection: false,
+            }}
+            allowTouchMove={true}
+            breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }}
+            className={`auto-scroll-carousel ${className ?? ''}`}
+        >
             {duplicatedItems.map((item, index) => (
-                <div key={index} className="keen-slider__slide ">
+                <SwiperSlide key={index}>
                     {item}
-                </div>
+                </SwiperSlide>
             ))}
-        </div>
+        </Swiper>
     );
 }

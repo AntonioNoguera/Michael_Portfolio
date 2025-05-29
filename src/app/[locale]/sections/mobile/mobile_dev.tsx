@@ -15,7 +15,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function MobileDev() {
-
+    
     const t = useTranslations('Mobile_Section');
 
     const languages = [
