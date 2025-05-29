@@ -1,12 +1,6 @@
-import Image, { StaticImageData } from 'next/image';
-import { useState } from 'react';
-
-export type UsedTecnology = {
-    id: string;
-    icon: StaticImageData;
-    title: string;
-    description: string;
-};
+import { UsedTecnology } from '@/data/types/used_tecnology';
+import Image from 'next/image';
+import { useState } from 'react'; 
 
 interface UsedTecnologiesProps {
     proyectId: string;

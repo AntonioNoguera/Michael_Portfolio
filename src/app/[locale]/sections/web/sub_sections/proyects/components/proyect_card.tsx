@@ -6,18 +6,10 @@ import UsedTecnologyItem from './used_technology_item';
 import github_logo from '@png_assets/github.png';
 import "keen-slider/keen-slider.min.css";
 
-import Image, { StaticImageData } from 'next/image'; 
+import Image, { StaticImageData } from 'next/image';
 
 import './bullets.css';
-
-export type Proyect = {
-  id: string;
-  icon: string;
-  name: string;
-  description: string;
-  github_link?: string;
-  used_tecnologies: UsedTecnology[];
-};
+import { Proyect } from '@/data/types/proyect';
 
 export type ProyectCardProps = {
   proyect: Proyect;
@@ -26,13 +18,6 @@ export type ProyectCardProps = {
     timeLeft: number;
   };
 }
-
-export type UsedTecnology = {
-  id: string;
-  icon: StaticImageData;
-  title: string;
-  description: string;
-};
 
 export default function ProjectCard({ proyect, progressData }: ProyectCardProps) {
   return (
@@ -49,13 +34,19 @@ export default function ProjectCard({ proyect, progressData }: ProyectCardProps)
             className="w-full h-auto rounded-md"
           />
 
-          <div className="autoplay-progress absolute bottom-0 left-0 z-10">
-            <svg viewBox="0 0 48 48" style={{ '--progress': progressData.progress } as React.CSSProperties} >
+          <div className="autoplay-progress absolute bottom-0 left-0 z-10 w-12 h-12 flex items-center justify-center text-white_primary text-sm">
+            <svg viewBox="0 0 48 48" className="absolute z-10 stroke-white_primary fill-none -rotate-90"
+              style={{
+                '--progress': progressData.progress,
+                strokeWidth: '4px',
+                strokeDasharray: '125.6',
+                strokeDashoffset: `calc(125.6px * (1 - var(--progress)))`
+              } as React.CSSProperties}>
               <circle cx="24" cy="24" r="20"></circle>
             </svg>
             <span>{progressData.timeLeft}</span>
           </div>
-        </div> 
+        </div>
 
         <div className="flex flex-col w-[45%] justify-between">
           <div className='flex flex-col gap-2'>
@@ -94,12 +85,12 @@ export default function ProjectCard({ proyect, progressData }: ProyectCardProps)
                     />
                   </div>
                 </Link>
-              )} 
+              )}
 
             </div>
-          </div> 
-        </div>  
-      </div> 
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
