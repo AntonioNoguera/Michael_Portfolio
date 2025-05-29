@@ -10,8 +10,7 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
 
 
-  images: {
-    domains: ['localhost'],
+  images: { 
     remotePatterns: [
       {
         protocol: 'https',
@@ -25,8 +24,7 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       }
-    ]
-
+    ] 
   },
 
   webpack(config: Configuration) {

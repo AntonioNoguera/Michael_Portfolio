@@ -41,7 +41,6 @@ export default function UsedTechnologyItem({proyectId, tecnologies }: UsedTecnol
                                     <div className="text-sm font-semibold mb-1">{item.title}</div>
                                     <div className="text-xs">{item.description}</div>
 
-                                    {/* Flecha del tooltip */}
                                     <div className="absolute top-full left-1/2 transform -translate-x-1/2">
                                         <div className="border-l-4 border-r-4 border-t-4 border-transparent border-t-black_primary"></div>
                                     </div>

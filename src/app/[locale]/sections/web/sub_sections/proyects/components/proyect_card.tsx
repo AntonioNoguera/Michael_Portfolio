@@ -6,9 +6,11 @@ import UsedTecnologyItem from './used_technology_item';
 import github_logo from '@png_assets/github.png';
 import "keen-slider/keen-slider.min.css";
 
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from 'next/image'; 
 
-export type Project = {
+import './bullets.css';
+
+export type Proyect = {
   id: string;
   icon: string;
   name: string;
@@ -17,6 +19,14 @@ export type Project = {
   used_tecnologies: UsedTecnology[];
 };
 
+export type ProyectCardProps = {
+  proyect: Proyect;
+  progressData: {
+    progress: number;
+    timeLeft: number;
+  };
+}
+
 export type UsedTecnology = {
   id: string;
   icon: StaticImageData;
@@ -24,23 +34,33 @@ export type UsedTecnology = {
   description: string;
 };
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ proyect, progressData }: ProyectCardProps) {
   return (
     <div className='px-20'>
 
       <div className="flex flex-row gap-6 w-full rounded-2xl p-4 bg-white shadow keen-slider__slide">
-        <Image
-          src={project.icon}
-          alt="Una descripción de la imagen"
-          width={1080}
-          height={607}
-          className=" w-[55%] h-auto flex  rounded-md"
-        />
+
+        <div className='w-[55%] h-auto flex rounded-md relative'>
+          <Image
+            src={proyect.icon}
+            alt="Una descripción de la imagen"
+            width={1080}
+            height={0}
+            className="w-full h-auto rounded-md"
+          />
+
+          <div className="autoplay-progress absolute bottom-0 left-0 z-10">
+            <svg viewBox="0 0 48 48" style={{ '--progress': progressData.progress } as React.CSSProperties} >
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span>{progressData.timeLeft}</span>
+          </div>
+        </div> 
 
         <div className="flex flex-col w-[45%] justify-between">
           <div className='flex flex-col gap-2'>
-            <h2 className="text-[3.2vh] font-semibold">{project.name}</h2>
-            <p className="text-[2.4vh] font-regular text-black_primary inline-flex">{project.description}</p>
+            <h2 className="text-[3.2vh] font-semibold">{proyect.name}</h2>
+            <p className="text-[2.4vh] font-regular text-black_primary inline-flex">{proyect.description}</p>
           </div>
 
           <div>
@@ -49,14 +69,14 @@ export default function ProjectCard({ project }: { project: Project }) {
             <div className='flex items-center flex-row justify-between'>
               <div className="flex flex-col  flex-grow w-full items-start justify-start gap-2">
                 <UsedTecnologyItem
-                  proyectId={project.id}
-                  tecnologies={project.used_tecnologies}
+                  proyectId={proyect.id}
+                  tecnologies={proyect.used_tecnologies}
                 />
               </div>
 
-              {project.github_link && (
+              {proyect.github_link && (
                 <Link
-                  href={project.github_link}
+                  href={proyect.github_link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -74,15 +94,12 @@ export default function ProjectCard({ project }: { project: Project }) {
                     />
                   </div>
                 </Link>
-              )}
-
+              )} 
 
             </div>
-          </div>
-
-        </div>
-      </div>
-
+          </div> 
+        </div>  
+      </div> 
     </div>
   );
 }

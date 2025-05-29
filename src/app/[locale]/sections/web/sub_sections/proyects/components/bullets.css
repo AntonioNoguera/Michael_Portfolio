@@ -1,6 +1,9 @@
 .custom-bullet {
-    @apply w-8 h-8 items-center bg-white text-gray-700 rounded-full cursor-pointer transition-all duration-300 mx-2 inline-flex  justify-center text-sm font-semibold;
-    
+    @apply w-8 h-8 items-center shadow-sm bg-white text-gray-700 rounded-full cursor-pointer transition-all duration-300 mx-2 inline-flex justify-center text-sm font-semibold;
+}
+
+.custom-bullet p {
+    margin-top: -2px;
 }
 
 .custom-bullet-active {
@@ -10,4 +13,28 @@
 
 .custom-bullet:hover {
     @apply bg-opacity-80
+}
+
+.autoplay-progress {
+    @apply text-white_primary text-xs ; 
+    
+    position: absolute;   
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.autoplay-progress svg {
+    @apply stroke-white_primary;
+
+    --progress: 0;
+    position: absolute; 
+    z-index: 10; 
+    stroke-width: 4px; 
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
 }

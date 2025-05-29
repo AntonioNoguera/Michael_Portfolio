@@ -1,12 +1,13 @@
 
 import Image, { StaticImageData } from 'next/image';
+import { RefObject } from '../../web/sub_sections/proyects/proyect_tab';
 
 export type ProfessionalExperienceProps = {
     companyIcon: StaticImageData | string
     companyName: string;
     companyPeriod: string;
     position: string;
-    positionIcon: string; 
+    positionIcon: string;  
 };
 
 export default function ProfessionalExperienceItem({companyIcon, companyName, companyPeriod, position, positionIcon}: ProfessionalExperienceProps) {

@@ -1,6 +1,6 @@
 'use client';
 
-import ProjectCard, { Project } from "./components/proyect_card";
+import ProjectCard, { Proyect } from "./components/proyect_card";
 
 import html from '@png_assets/LOGO_HTML.png';
 import js from '@png_assets/LOGO_JS.png';
@@ -14,20 +14,17 @@ import ts from '@png_assets/LOGO_TS.png';
 import php from '@png_assets/LOGO_PHP.png';
 import jquery from '@svg_assets/svg_jquery.svg';
 
-import React, { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
+import React, { useRef, useState } from "react";
 
 import './components/bullets.css';
+ 
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Swiper as SwiperType } from 'swiper'; 
+import { Autoplay, Pagination } from 'swiper/modules';
 
+import 'swiper/css'; 
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { Pagination } from 'swiper/modules';
-
-import 'swiper/css';
-
-
-const mockProjects: Project[] = [
+const mockProjects: Proyect[] = [
     {
         id: '1',
         icon: 'https://i.imgur.com/4emRN2X.gif',
@@ -63,7 +60,7 @@ const mockProjects: Project[] = [
     },
     {
         id: '2',
-        icon: 'https://i.imgur.com/ubPPCyi.png',
+        icon: 'https://i.imgur.com/g9pAlyk.gif',
         name: 'Plataforma de predicción de paro cardiacos',
         description: 'Aplicación web diseñada para asistir en la predicción temprana de paros cardiacos mediante el análisis de datos clínicos. Utiliza algoritmos de machine learning desarrollados con Python y scikit-learn para identificar patrones en los signos vitales y antecedentes médicos del paciente. La plataforma presenta una interfaz sencilla construida con HTML, JavaScript y Bootstrap, permitiendo a los usuarios ingresar datos relevantes y visualizar los resultados de predicción en tiempo real de forma clara y accesible.',
         github_link: 'https://github.com/AntonioNoguera/pySeletedThemesOf_SI',
@@ -224,13 +221,13 @@ const mockProjects: Project[] = [
                 icon: css,
                 title: 'CSS',
                 description: 'Lenguaje de estilos utilizado para diseñar y maquetar páginas web.'
-            }, 
+            },
             {
                 id: '3',
                 icon: html,
                 title: 'CSS',
                 description: 'Lenguaje de estilos utilizado para diseñar y maquetar páginas web.'
-            }, 
+            },
             {
                 id: '2',
                 icon: js,
@@ -243,7 +240,7 @@ const mockProjects: Project[] = [
                 title: 'Bootstrap',
                 description: 'Framework CSS que facilita el diseño responsive y componentes reutilizables.'
             },
-            
+
         ]
     },
     {
@@ -258,13 +255,13 @@ const mockProjects: Project[] = [
                 icon: css,
                 title: 'CSS',
                 description: 'Lenguaje de estilos utilizado para diseñar y maquetar páginas web.'
-            }, 
+            },
             {
                 id: '3',
                 icon: html,
                 title: 'CSS',
                 description: 'Lenguaje de estilos utilizado para diseñar y maquetar páginas web.'
-            }, 
+            },
             {
                 id: '2',
                 icon: js,
@@ -277,10 +274,14 @@ const mockProjects: Project[] = [
                 title: 'Bootstrap',
                 description: 'Framework CSS que facilita el diseño responsive y componentes reutilizables.'
             },
-            
+
         ]
     }
 ];
+
+export interface RefObject<T> {
+    readonly current: T | null;
+}
 
 export default function ProyectTab() {
 
@@ -291,8 +292,20 @@ export default function ProyectTab() {
         bulletClass: 'custom-bullet',
         bulletActiveClass: 'custom-bullet-active',
         renderBullet: function (index: number, className: string) {
-            return '<div class="' + className + '">' + (index + 1) + '</div>';
+            return '<div class="' + className + '"> <p>' + (index + 1) + '</p></div>';
         },
+    };
+ 
+    const [progressData, setProgressData] = useState({
+        progress: 0,
+        timeLeft: 0
+    });
+
+    const onAutoplayTimeLeft = (s: SwiperType, time: number, progress: number) => { 
+        setProgressData({
+            progress: 1 - progress,
+            timeLeft: Math.ceil(time / 1000)
+        });
     };
 
     return (
@@ -301,19 +314,30 @@ export default function ProyectTab() {
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
+                autoplay={{
+                    delay: 90000,
+                }}
+                grabCursor={true}
                 pagination={pagination}
-                modules={[Pagination]}
+                modules={[Autoplay, Pagination]}
+
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
                 className="mySwiper"
             >
                 {mockProjects.map((proyect) => (
                     <SwiperSlide key={proyect.id + "parent"}>
-                        <ProjectCard key={proyect.id} project={proyect} />
+                        <ProjectCard
+                            key={proyect.id}
+                            proyect={proyect}
+                            progressData={progressData}
+                        />
                     </SwiperSlide>
                 ))
                 }
-            </Swiper>
 
-            <div className="custom-pagination-container  inline-block px-10 mt-2 py-2 rounded-2xl "> </div>
+                <div className="custom-pagination-container inline-block px-10 mt-2 py-3 rounded-2xl "> </div>
+
+            </Swiper> 
         </div>
     );
 }
