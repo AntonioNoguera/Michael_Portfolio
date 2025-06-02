@@ -19,33 +19,38 @@ export default function ContactSection() {
 
             <div className="flex-grow flex flex-col items-center justify-center w-full">
 
+            <p className="text-2xl font-bold text-center text-black_primary px-4 md:px-6 transition-all duration-300 mt-4 lg:mt-0">
+                    Tienes algo en mente?
+                </p>
+
                 <p className="text-5xl md:text-8xl lg:text-page_title font-bold text-center text-black_primary px-4 md:px-6 transition-all duration-300 mt-4 lg:mt-0">
                     {t('title')}
                 </p>
 
-                <p className="text-body2 text-center px-28 pt-6 text-black_primary">
-                    {t('subtitle')}
-                </p>
 
-                <div className="flex flex-wrap w-full justify-center items- items-stretch">
-                    <ContactOption
-                        image={cv}
-                        label={t('std_cv')}
-                        sublabel={t('std_cv_subtitle')}
-                    />
+                <div className="flex flex-row justify-around w-full">
+                    <div className="flex flex-col bg-slate-500 justify.">
 
-                    <ContactOption
-                        image={cv}
-                        label={t('hrvd_cv')}
-                        sublabel={t('hrvd_cv_subtitle')}
-                    />
+                        {/* emailK */}
+                        <div>
 
-                    <ContactOption 
-                        image={mail} 
-                        label={ t('email') } 
-                        sublabel={ t('cv_email')} 
-                    /> 
+                        </div>
+
+                        {/* Curriculums */}
+                        <div>
+
+                        </div>
+
+                    </div>
+
+                    <div className="flex flex-col bg-slate-500"> 
+                        {/* Redes */}
+                        <p>
+                            Redes
+                        </p>
+                    </div>
                 </div>
+
             </div> 
 
             <Footer />
