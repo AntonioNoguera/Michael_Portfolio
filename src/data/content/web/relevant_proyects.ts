@@ -49,7 +49,7 @@ export const relevant_proyects: Proyect[] = [
         id: '2',
         icon: 'https://i.imgur.com/g9pAlyk.gif',
         name: 'Plataforma de predicción de paro cardiacos',
-        description: 'Aplicación web diseñada para asistir en la predicción temprana de paros cardiacos mediante el análisis de datos clínicos. Utiliza algoritmos de machine learning desarrollados con Python y scikit-learn para identificar patrones en los signos vitales y antecedentes médicos del paciente. La plataforma presenta una interfaz sencilla construida con HTML, JavaScript y Bootstrap, permitiendo a los usuarios ingresar datos relevantes y visualizar los resultados de predicción en tiempo real de forma clara y accesible.',
+        description: 'Aplicación web diseñada para asistir en la predicción temprana de paros cardiacos mediante el análisis de datos clínicos.',
         github_link: 'https://github.com/AntonioNoguera/pySeletedThemesOf_SI',
         used_tecnologies: [
             {

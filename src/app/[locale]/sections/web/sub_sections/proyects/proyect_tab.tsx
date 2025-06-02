@@ -13,8 +13,6 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css'; 
 import { relevant_proyects } from "@/data/content/web/relevant_proyects";
 
- 
-
 export default function ProyectTab() {
 
     const pagination = {
@@ -46,7 +44,7 @@ export default function ProyectTab() {
     };
 
     return (
-        <div className="w-full text-center ">
+        <div className="w-full text-center gap-y-4 ">
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -64,7 +62,7 @@ export default function ProyectTab() {
                 onSliderMove={() => setIsInteracting(true)}
                 onTransitionEnd={() => setIsInteracting(false)}
 
-                className="mySwiper"
+                className="" 
             >
                 {relevant_proyects.map((proyect) => (
                     <SwiperSlide key={proyect.id + "parent"}>
@@ -77,7 +75,7 @@ export default function ProyectTab() {
                 ))
                 }
 
-                <div className="custom-pagination-container inline-block px-10 mt-2 py-3 rounded-2xl "> </div>
+                <div className="custom-pagination-container inline-block px-10 py-3 rounded-2xl"> </div>
 
             </Swiper>
         </div>

@@ -41,7 +41,12 @@ export default function MobileDev() {
                 {t('subtitle')}
             </p> 
 
-            <Slider items={languages} className="fade-sides !w-[98%]" /> 
+            {/* //Maybe delete this implementation */}
+            {languages.map((item, index) => ( 
+                    item
+            ))}
+
+            {/* <Slider items={languages} className="fade-sides !w-[98%]" />  */}
         </section>
     );
 }
