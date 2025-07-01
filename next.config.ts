@@ -9,7 +9,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
 
-
   images: { 
     remotePatterns: [
       {
@@ -28,6 +27,7 @@ const nextConfig: NextConfig = {
   },
 
   webpack(config: Configuration) {
+    // Configuración de alias existente
     config.resolve = {
       ...config.resolve,
       alias: {
@@ -40,6 +40,13 @@ const nextConfig: NextConfig = {
         '@svg_assets': path.resolve(__dirname, 'public/svg'),
       },
     };
+
+    // Configuración de SVGR para SVGs
+    config.module?.rules?.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack']
+    });
+
     return config;
   },
 };

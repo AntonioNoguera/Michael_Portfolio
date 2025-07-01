@@ -35,7 +35,7 @@ export const UserProfesionalExperience: ProfesionalExperience[] = [
     {
         companyIcon: viva,
         companyName: "viva_aerobus_name",
-        companyPeriod: "fulltime_period",
+        companyPeriod: "viva_period",
         position: "mobile_engineer",
         positionIcon: mobile,
     },
