@@ -5,6 +5,7 @@ import React from "react";
 
 import cv from '@png_assets/CV_ICON.png';
 import insta from '@svg_assets/svg_instagram.svg'
+import SocialMediaButton from "./components/SocialMediaButton";
 
 export default function ContactSection() {
 
@@ -12,8 +13,11 @@ export default function ContactSection() {
 
     const subtitleClass: string = "text-primary text-5xl font-bold";
 
-    // const buttonOption: string = "bg-primary rounded-2xl text-white_primary text-3xl px-4 py-2 font-semibold items-center flex-row flex shadow-md cursor-pointer";
+    const svgClass: string = "w-10 inline-block filter brightness-0 invert";
+    const socialNetworkHelp: string = "font-light text-sm py-1 text-white opacity-60 italic";
+
     const buttonOption: string = "bg-primary rounded-2xl text-white_primary text-xl md:text-2xl lg:text-3xl px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 font-semibold items-center flex-row flex shadow-md cursor-pointer w-full max-w-xs md:max-w-sm lg:max-w-none";
+
     return (
         <section id="contact" className="h-screen snap-start bg-secondary flex flex-col items-centertext-center ">
 
@@ -56,16 +60,13 @@ export default function ContactSection() {
                         </p>
 
                         <div className="flex flex-col gap-6">
-                            <div className={buttonOption}>
-                                <img src={insta.src} alt="Curriculum" className="w-10inline-block filter brightness-0 invert" />
-
-                                <div className="flex flex-row items-end ml-4">
-                                    <div>Instagram</div>
-                                    <div className="text-sm py-1 text-gray-500"> (En construcción)</div>
-
-                                </div>
-
-                            </div>
+                            <SocialMediaButton
+                                icon={insta.src}
+                                iconAlt="Instagram icon"
+                                platformName="Instagram"
+                                username="IngLaLegge"
+                                onClick={() => window.open('https://instagram.com/IngLaLegge', '_blank')}
+                            />
 
                             <div className={buttonOption}>
                                 Insta
