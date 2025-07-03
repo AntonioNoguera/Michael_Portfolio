@@ -17,8 +17,8 @@ const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({
 }) => {
   
   const buttonClassName = "bg-primary rounded-2xl text-white_primary text-xl md:text-2xl lg:text-3xl px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 font-semibold items-center flex-row flex shadow-md cursor-pointer w-full max-w-xs md:max-w-sm lg:max-w-none";
-  const iconClassName = "w-8 h-8 inline-block brightness-0 invert";
-  const usernameClassName = "font-light italic text-sm text-white opacity-50";
+  const iconClassName = "inline-block w-8 h-8 brightness-0 invert";
+  const usernameClassName = "font-light italic text-sm text-white opacity-50 mb-1";
 
   return (
     <div className={buttonClassName} onClick={onClick}>
@@ -28,7 +28,7 @@ const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({
         className={iconClassName} 
       />
       
-      <div className="flex flex-row items-end gap-x-2 ml-4">
+      <div className="flex flex-row items-end gap-x-3 ml-4">
         <div>{platformName}</div>
         <div className={usernameClassName}>{username}</div> 
       </div> 
