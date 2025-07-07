@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import React from "react";
 
 import SharedLayoutAnimation from "./sub_sections/web_shared_sections";
 

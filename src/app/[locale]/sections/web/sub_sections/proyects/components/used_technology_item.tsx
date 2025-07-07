@@ -12,7 +12,7 @@ export default function UsedTechnologyItem({proyectId, tecnologies }: UsedTecnol
 
     return (
         <div className="flex flex-row gap-3">
-            {tecnologies.map((item, index) => (
+            {tecnologies.map((item) => (
                 <div
                     key={proyectId + item.id}
                     className="relative inline-block"

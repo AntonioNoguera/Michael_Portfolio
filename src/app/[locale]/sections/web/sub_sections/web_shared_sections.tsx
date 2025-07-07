@@ -11,9 +11,9 @@ import ProyectTab from "./proyects/proyect_tab"
 export default function SharedLayoutAnimation() {
     const [selectedTab, setSelectedTab] = useState(tabs[0])
 
-    let tabMenuClass: string = "flex gap-x-1 bg-primary85 mx-20 rounded-2xl px-1";
-    let tabClass: string = "w-full py-4 my-1 flex text-white rounded-xl cursor-pointer relative justify-items-center justify-center";
-    let underlineClass: string = "absolute bottom-0 left-0 right-0 h-[2px] bg-[#00FF0000] ";
+    const tabMenuClass: string = "flex gap-x-1 bg-primary85 mx-20 rounded-2xl px-1";
+    const tabClass: string = "w-full py-4 my-1 flex text-white rounded-xl cursor-pointer relative justify-items-center justify-center";
+    const underlineClass: string = "absolute bottom-0 left-0 right-0 h-[2px] bg-[#00FF0000] ";
 
     return (
         <div className=" w-full h-full flex flex-col">

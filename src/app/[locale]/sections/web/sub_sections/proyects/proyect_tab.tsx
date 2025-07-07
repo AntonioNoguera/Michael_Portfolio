@@ -2,7 +2,7 @@
 
 import ProjectCard from "./components/proyect_card";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 import './components/bullets.css';
 

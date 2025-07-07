@@ -7,15 +7,17 @@ import next from '@svg_assets/svg_next.svg'
 import bootstrap from '@png_assets/LOGO_Bootstrap.png'
 import tailwind from '@png_assets/LOGO_Tailwind.png'
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+// import { useState } from "react";
 import TecnologyCard from './components/tecnology_card';
 
 export default function TecnicalTab() {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const t = useTranslations('Web_Section');
-
+    // let [isOpen, setIsOpen] = useState(false);
+    const t = useTranslations('Web_Section'); 
     return (
+
+
+
         <div className='flex flex-col h-full w-full items-center justify-center'>
             <p className="text-sm md:text-body2 text-center px-4  pt-6 text-black_primary">
                 {t('subtitle')}
@@ -27,7 +29,7 @@ export default function TecnicalTab() {
                     image={[ts, js]}
                     label={t('programming_languages')}
                     classForLabel="programming-languages-header"
-                    onClick={() => setIsOpen(true)}
+                    onClick={() => {}}
                 />
 
                 <TecnologyCard
@@ -35,7 +37,7 @@ export default function TecnicalTab() {
                     image={[next, react]}
                     label={t('libraries_languages')}
                     classForLabel="libraries-frameworks-header"
-                    onClick={() => setIsOpen(true)}
+                    onClick={() => {}}
                 />
 
                 <TecnologyCard
@@ -43,7 +45,7 @@ export default function TecnicalTab() {
                     image={[bootstrap, tailwind]}
                     label={t('css_languages')}
                     classForLabel="css-libraries-header"
-                    onClick={() => setIsOpen(true)}
+                    onClick={() => {}}
                 />
             </div>
 
