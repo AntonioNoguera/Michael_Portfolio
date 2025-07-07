@@ -198,9 +198,10 @@ export const relevant_proyects: Proyect[] = [
     },
     {
         id: '6',
-        icon: 'https://i.imgur.com/e9xMTYM.gif',
-        name: 'El proyecto fello de e learning',
-        description: 'Sistema seguro para unir, almacenar y administrar documentos PDF con control de acceso por roles.',
+        icon: 'https://i.imgur.com/gUCnv09.gif',
+        name: 'Plataforma de E - Learning',
+        description: 'Plataforma orientada al aprendizaje de Solfeo (conocimiento teórico de música) y generación de Post, de tipo blog, para un conjunto de estudiantes.',
+        github_link: 'https://github.com/AntonioNoguera/eLearing-TechnicalSchool-CBTis116',
         used_tecnologies: [
 
             {
