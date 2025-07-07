@@ -12,18 +12,11 @@ import mobile from '@png_assets/icon-ios-android.png'
 
 export const UserProfesionalExperience: ProfesionalExperience[] = [
     {
-        companyIcon: pacific,
-        companyName: "pacific_name",
-        companyPeriod: "offside_period",
-        position: "logistic_charge",
-        positionIcon: logistic,
-    },
-    {
-        companyIcon: ef,
-        companyName: "enviaflores_name",
-        companyPeriod: "internship_period",
-        position: "android_intern",
-        positionIcon: android,
+        companyIcon: viva,
+        companyName: "viva_aerobus_name",
+        companyPeriod: "viva_period",
+        position: "mobile_engineer",
+        positionIcon: mobile,
     },
     {
         companyIcon: ef,
@@ -33,10 +26,17 @@ export const UserProfesionalExperience: ProfesionalExperience[] = [
         positionIcon: ios,
     },
     {
-        companyIcon: viva,
-        companyName: "viva_aerobus_name",
-        companyPeriod: "viva_period",
-        position: "mobile_engineer",
-        positionIcon: mobile,
+        companyIcon: ef,
+        companyName: "enviaflores_name",
+        companyPeriod: "internship_period",
+        position: "android_intern",
+        positionIcon: android,
+    },
+    {
+        companyIcon: pacific,
+        companyName: "pacific_name",
+        companyPeriod: "offside_period",
+        position: "logistic_charge",
+        positionIcon: logistic,
     },
 ]

@@ -1,7 +1,7 @@
 
 import { ProfesionalExperience } from '@/data/types/profesional_experience';
 import { useTranslations } from 'next-intl';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 export type ProfessionalExperienceProps = {
     experienceInfo: ProfesionalExperience;

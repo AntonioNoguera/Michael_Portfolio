@@ -34,37 +34,41 @@ export default function AboutMe() {
                     />
                 </div>
 
-                <div className="w-full md:w-3/4 text-center md:text-left transition-all duration-300 md:pr-0 pr-5"> 
+                <div className="w-full md:w-3/4 text-center md:text-left transition-all duration-300 md:pr-0 pr-5">
                     <div className="mb-6 w-full  text-center">
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">{c('name')}</h1>
                         <p className="text-sm md:text-base lg:text-lg mt-2">{t('description')}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6"> 
+                    <div className="grid grid-cols-1 gap-6">
                         <div className="mb-4 lg:mb-0">
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-primary text-center">{t('vocational_training_title')}</h2>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"> 
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
 
                                     <div className="flex justify-evenly pb-1 px-10">
                                         <Image src={dgti} alt="DGTI" className="w-auto h-[13vh]" />
                                         <Image src={cbtis} alt="CBTIS" className="w-auto h-[13vh]" />
                                     </div>
-                                    <p className=" pt-2 -mb-2">{t('tecnitian')}</p>
+                                    <span className='flex flex-col xs:flex-row w-full justify-center pt-2 gap-x-2'> 
+                                        <p className="font-bold">{t('tecnitian')}</p>
+                                        <p className=''>Líder de Generación 2020</p>
+                                    </span>
                                 </div>
-                                
+
                                 <div className="shadow-std rounded-xl bg-white_primary px-3 py-5 text-center flex flex-col justify-around">
                                     <div className="flex justify-evenly px-10 pb-1">
                                         <Image src={uanl} alt="UANL" className="w-auto h-[13vh]" />
 
                                         <Image src={fime} alt="FIME" className="w-auto h-[13vh]" />
                                     </div>
+                                    <p className="pt-2 font-bold">{t('engineer')}</p>
 
-                                    <p className=" pt-2 -mb-2">{t('engineer')}</p>
+                                    <p className=''>Mención Honorifica</p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="mb-10 sm:mb-0">
                             <h2 className="text-xl md:text-2xl font-semibold mb-3 text-center text-primary">{t('professional_experiencie_title')}</h2>
 

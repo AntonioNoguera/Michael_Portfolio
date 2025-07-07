@@ -13,8 +13,6 @@ type LanguageCardProps = {
 
 export default function LanguageCard({ image, languageImage, label, className = '' }: LanguageCardProps) {
 
-    const withLabelStyle: string = "text-black_primary";
-
     return (
         <div className=' mx-11 my-10'>
             <motion.div
