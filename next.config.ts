@@ -9,7 +9,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
 
-  images: { 
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       }
-    ] 
+    ]
   },
 
   webpack(config: Configuration) {
@@ -44,7 +44,16 @@ const nextConfig: NextConfig = {
     // Configuración de SVGR para SVGs
     config.module?.rules?.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack']
+      issuer: /\.[jt]sx?$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            icon: true
+          }
+        }
+      ],
+      type: 'javascript/auto',
     });
 
     return config;
