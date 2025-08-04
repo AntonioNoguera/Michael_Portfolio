@@ -20,9 +20,10 @@ const LoadingOverlay = ({ loading }: { loading: boolean }) => {
             </ReactMarkdown>
 
             <Image
-                src={github_logo}
+                src={String(github_logo.src)}
                 alt={`Bandera de idioma`}
                 height={50}
+                width = {50}
                 className=" border-t-transparent   animate-spin-slow"
             />
 

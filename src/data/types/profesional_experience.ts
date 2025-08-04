@@ -5,5 +5,5 @@ export type ProfesionalExperience = {
     companyName: string;
     companyPeriod: string;
     position: string;
-    positionIcon: string;  
+    positionIcon: StaticImageData | string; 
 };

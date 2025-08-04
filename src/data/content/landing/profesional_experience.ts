@@ -12,31 +12,31 @@ import mobile from '@png_assets/icon-ios-android.png'
 
 export const UserProfesionalExperience: ProfesionalExperience[] = [
     {
-        companyIcon: viva,
+        companyIcon: String(viva.src),
         companyName: "viva_aerobus_name",
         companyPeriod: "viva_period",
         position: "mobile_engineer",
-        positionIcon: mobile,
+        positionIcon: String(mobile.src),
     },
     {
-        companyIcon: ef,
+        companyIcon: String(ef.src),
         companyName: "enviaflores_name",
         companyPeriod: "fulltime_period",
         position: "ios_developer",
-        positionIcon: ios,
+        positionIcon: String(ios.src),
     },
     {
-        companyIcon: '/svg/svg_enviaflores.svg',
+        companyIcon: String(ef.src),
         companyName: "enviaflores_name",
         companyPeriod: "internship_period",
         position: "android_intern",
-        positionIcon: android,
+        positionIcon: String(android.src),
     },
     {
-        companyIcon: pacific,
+        companyIcon: String(pacific.src),
         companyName: "pacific_name",
         companyPeriod: "offside_period",
         position: "logistic_charge",
-        positionIcon: logistic,
+        positionIcon: String(logistic.src),
     },
 ]
