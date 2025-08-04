@@ -26,7 +26,7 @@ export const UserProfesionalExperience: ProfesionalExperience[] = [
         positionIcon: ios,
     },
     {
-        companyIcon: ef,
+        companyIcon: '/svg/svg_enviaflores.svg',
         companyName: "enviaflores_name",
         companyPeriod: "internship_period",
         position: "android_intern",
