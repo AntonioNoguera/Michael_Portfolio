@@ -2,7 +2,7 @@ import ts from '@png_assets/LOGO_TS.png';
 import js from '@png_assets/LOGO_JS.png';
 
 import react from '@png_assets/LOGO_REACT.png'
-import next from '@svg_assets/svg_next.svg'
+import next from '@png_assets/svg_next.png'
 
 import bootstrap from '@png_assets/LOGO_Bootstrap.png'
 import tailwind from '@png_assets/LOGO_Tailwind.png'

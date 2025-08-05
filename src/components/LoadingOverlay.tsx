@@ -1,6 +1,6 @@
 
 
-import github_logo from '@svg_assets/svg_personal_github.svg';
+import github_logo from '@png_assets/svg_personal_github.png';
 
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';

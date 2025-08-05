@@ -1,7 +1,8 @@
-import instagram from '@svg_assets/svg_instagram.svg'
+ 
 import { ContactOption } from "@/data/types/contact_option";
-import linkedin from '@svg_assets/svg_linkedin.svg'
-import github from '@svg_assets/svg_github.svg'
+import linkedin from '@png_assets/svg_linkedin.png'
+import github from '@png_assets/github.png'
+import instagram from '@png_assets/svg_instagram.png'
 
 export const ContactOptions: ContactOption[] = [
     {

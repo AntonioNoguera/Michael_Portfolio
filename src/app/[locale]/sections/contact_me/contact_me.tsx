@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import mail from '@svg_assets/mail_icon.svg';
+import mail from '@png_assets/mail_icon.png';
 
 import SocialMediaButton from "./components/SocialMediaButton";
 import { ContactOptions } from "@/data/content/contact/contact_options";

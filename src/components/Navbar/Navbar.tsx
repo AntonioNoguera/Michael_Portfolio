@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import NavItem, { NavItemProps } from './NavItem';
 
-import github_logo from '@svg_assets/svg_personal_github.svg';
-import mobile_logo from '@svg_assets/navbar/svg_mobile_icon.svg';
-import web_logo from '@svg_assets/navbar/svg_web_icon.svg';
-import contact_logo from '@svg_assets/navbar/svg_contact_me_icon.svg';
+import github_logo from '@png_assets/svg_personal_github.png';
+import mobile_logo from '@png_assets/navbar/svg_mobile_icon.png';
+import web_logo from '@png_assets/navbar/svg_web_icon.png';
+import contact_logo from '@png_assets/navbar/svg_contact_me_icon.png';
 
 import spanish_flag from '@png_assets/FLAG_SPANISH.png';
 import english_flag from '@png_assets/FLAG_ENGLISH.png';

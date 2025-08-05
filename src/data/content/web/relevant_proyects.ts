@@ -8,7 +8,7 @@ import tailwind from '@png_assets/LOGO_Tailwind.png';
 import react from '@png_assets/LOGO_REACT.png';
 import ts from '@png_assets/LOGO_TS.png';
 import php from '@png_assets/LOGO_PHP.png';
-import jquery from '@svg_assets/svg_jquery.svg'; 
+import jquery from '@png_assets/svg_jquery.png'; 
 import { Proyect } from '@/data/types/proyect';
 
 export const relevant_proyects: Proyect[] = [

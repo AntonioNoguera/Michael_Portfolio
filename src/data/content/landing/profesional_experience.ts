@@ -1,22 +1,22 @@
 import { ProfesionalExperience } from "@/data/types/profesional_experience";
-
-import ef from '@svg_assets/svg_enviaflores.svg';
+ 
 import pacific from '@png_assets/LOGO_PACIFIC.png';
 import logistic from '@png_assets/LOGISTIC_ICON.png';
 
-import viva from '@svg_assets/viva_logo.png';
+import viva from '@png_assets/viva_logo.png';
 
-import android from '@svg_assets/svg_android.svg';
-import ios from '@svg_assets/svg_apple.svg';
+import ef from '@png_assets/svg_enviaflores.png';
+import android from '@png_assets/LOGO_ANDROID.png';
+import ios from '@png_assets/svg_apple.png';
 import mobile from '@png_assets/icon-ios-android.png'
 
 export const UserProfesionalExperience: ProfesionalExperience[] = [
     {
-        companyIcon: String(viva.src),
+        companyIcon: viva,
         companyName: "viva_aerobus_name",
         companyPeriod: "viva_period",
         position: "mobile_engineer",
-        positionIcon: String(mobile.src),
+        positionIcon: mobile,
     },
     {
         companyIcon: String(ef.src),

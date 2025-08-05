@@ -40,22 +40,7 @@ const nextConfig: NextConfig = {
         '@svg_assets': path.resolve(__dirname, 'public/svg'),
       },
     };
-
-    // Configuración de SVGR para SVGs
-    config.module?.rules?.push({
-      test: /\.svg$/,
-      issuer: /\.[jt]sx?$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            icon: true
-          }
-        }
-      ],
-      type: 'javascript/auto',
-    });
-
+    
     return config;
   },
 };
