@@ -36,8 +36,7 @@ const nextConfig: NextConfig = {
         '@i18n': path.resolve(__dirname, 'src/i18n'),
         '@components': path.resolve(__dirname, 'src/components'),
         '@messages': path.resolve(__dirname, 'messages'),
-        '@png_assets': path.resolve(__dirname, 'public/png'),
-        '@svg_assets': path.resolve(__dirname, 'public/svg'),
+        '@png_assets': path.resolve(__dirname, 'public/png')
       },
     };
     
