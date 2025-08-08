@@ -1,9 +1,10 @@
 'use client'
 
+import Image from 'next/image';
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import mail from '@png_assets/mail_icon.png';
+import mail from '@png_assets/MAIL_ICON.png';
 
 import SocialMediaButton from "./components/SocialMediaButton";
 import { ContactOptions } from "@/data/content/contact/contact_options";
@@ -40,10 +41,10 @@ export default function ContactSection() {
                         <div className="flex flex-col gap-4">
                             <p className={subtitleClass}>Agendemos una cita</p>
                             <div className={`${buttonClassName} gap-x-4 w-full align-center justify-a`}>
-                                <img
-                                    src={mail.src}
+                                <Image
+                                    src={mail}
                                     alt="Mail Icon"
-                                    className={iconStyles}></img>
+                                    className={iconStyles}/>
                                 <span>
                                     Mándame un correo
                                 </span>
