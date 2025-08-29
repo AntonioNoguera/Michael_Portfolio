@@ -18,6 +18,12 @@ html {
    animation: gradientMove 10s ease-in-out infinite;
 }
 
+.bg-cover {
+   background: linear-gradient(45deg, #162729, #30D3E8);
+   background-size: 200% 200%;
+    
+}
+
 @keyframes gradientMove {
    0% {
       background-position: 0% 50%;
