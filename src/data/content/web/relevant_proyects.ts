@@ -234,8 +234,8 @@ export const relevant_proyects: Proyect[] = [
     {
         id: '7',
         icon: 'https://i.imgur.com/e9xMTYM.gif',
-        name: 'El proyecto feo de la calculadora personal',
-        description: 'Sistema seguro para unir, almacenar y administrar documentos PDF con control de acceso por roles.',
+        name: 'Calculadora de gastos personales',
+        description: 'Aplicación web diseñada para ayudar a los usuarios a gestionar y calcular sus gastos personales de manera eficiente.',
         used_tecnologies: [
 
             {
