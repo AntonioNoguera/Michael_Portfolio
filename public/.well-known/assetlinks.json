@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.michael.dev.showcase",
+      "sha256_cert_fingerprints": [
+        "78:AD:22:95:D6:5B:47:55:04:68:5A:D0:F6:CF:43:F6:52:04:38:36:04:E6:FA:89:55:D6:3B:2D:B9:52:0E:D2",
+        "49:8F:5A:D9:AD:C9:9D:C3:F9:1A:D4:A6:70:DD:6F:26:7E:E3:FA:5B:9C:7E:43:F8:18:5E:DF:B2:0D:83:BA:85"
+      ]
+    }
+  }
+]
