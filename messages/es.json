@@ -5,6 +5,13 @@
   "Commons": {
     "name": "Michael Noguera"
   },
+  "Cover": {
+    "name": "Michael Noguera",
+    "role": "Mobile Specialist",
+    "unlock_hint": "Desliza o haz clic para entrar",
+    "project_label": "Sobre este portafolio",
+    "project_description": "Sitio personal construido desde cero para documentar mi trayectoria como desarrollador móvil, con apps, proyectos y experiencias profesionales."
+  },
   "Navbar": {
     "dev_name": "Michael Noguera",
     "title": "El portafolio \n\n de  **Michael**",

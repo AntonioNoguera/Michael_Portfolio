@@ -3,7 +3,9 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 import NavItem, { NavItemProps } from './NavItem';
+import { useLockscreen } from '@/contexts/LockscreenContext';
 
 import github_logo from '@png_assets/svg_personal_github.png';
 import timeline_logo from '@png_assets/svg_topography.png';
@@ -26,6 +28,7 @@ const Navbar: React.FC = () => {
   const t = useTranslations('Navbar');
   const locale = useLocale();
   const router = useRouter();
+  const { isUnlocked } = useLockscreen();
 
   const handleLanguageChange = (): void => {
     const newLocale = locale === 'es' ? 'en' : 'es';
@@ -43,8 +46,12 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-primary shadow text-white_primary text-center">
-      <div className="h-full flex flex-col justify-center items-center gap-10 py-10">
+    <motion.div
+      initial={{ x: '-100%' }}
+      animate={{ x: isUnlocked ? 0 : '-100%' }}
+      transition={{ type: 'spring', stiffness: 120, damping: 20, delay: isUnlocked ? 0.4 : 0 }}
+    >
+      <nav className="bg-primary shadow text-white_primary text-center h-full flex flex-col justify-center items-center gap-10 py-10">
         <div className='w-full flex flex-col justify-items-start text-lg -mx-2'>
           <ReactMarkdown
             components={{
@@ -78,8 +85,8 @@ const Navbar: React.FC = () => {
             className="transition-transform hover:rotate-3"
           />
         </button>
-      </div>
-    </nav>
+      </nav>
+    </motion.div>
   );
 }
 

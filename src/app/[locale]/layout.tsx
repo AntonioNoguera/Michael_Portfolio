@@ -9,6 +9,8 @@ import Navbar from '@/components/Navbar/Navbar';
 import '../../styles/styles.css'
 import { routing } from '@/i18n/routing';
 import VideoBackgroundWrapper from '@/components/VideoBackgroundWrapper';
+import { LockscreenProvider } from '@/contexts/LockscreenContext';
+import Lockscreen from '@/components/Lockscreen/Lockscreen';
 
 const raleway = Raleway({
     subsets: ['latin'],
@@ -39,13 +41,15 @@ export default async function LocaleLayout({ children, params }: Props) {
             <body className={`${raleway.variable} font-sans`}>
                 <div className='flex'>
                     <NextIntlClientProvider locale={locale} messages={messages}>
- 
-                        <VideoBackgroundWrapper> 
-                        <Navbar />
-                        <main className='block w-full h-full overflow-auto'>
-                            {children}
-                        </main>
-                        </VideoBackgroundWrapper>
+                        <LockscreenProvider>
+                            <Lockscreen />
+                            <VideoBackgroundWrapper>
+                                <Navbar />
+                                <main className='block w-full h-full overflow-auto'>
+                                    {children}
+                                </main>
+                            </VideoBackgroundWrapper>
+                        </LockscreenProvider>
                     </NextIntlClientProvider>
                 </div>
             </body>
