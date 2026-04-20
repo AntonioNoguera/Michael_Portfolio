@@ -35,8 +35,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         <html className="h-full" lang={locale}>
             <head>
                 <title>Michael Portfolio</title>
-                <link rel="icon" href="/svg/svg_personal_github.svg" type="image/svg+xml" />
-                <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
             </head>
             <body className={`${raleway.variable} font-sans`}>
                 <div className='flex'>

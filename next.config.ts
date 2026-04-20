@@ -7,6 +7,8 @@ import type { Configuration } from 'webpack';
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio',
   skipTrailingSlashRedirect: true,
 
   images: {

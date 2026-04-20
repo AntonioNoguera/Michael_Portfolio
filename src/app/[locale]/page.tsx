@@ -5,8 +5,9 @@ import { motion, useScroll } from 'framer-motion';
 import { useEffect } from 'react';
 import CoverPage from './sections/cover_page/cover_page';
 import AboutMe from './sections/about_me/about_me';
+import Timeline from './sections/timeline/timeline';
 import WebSection from './sections/web/web_dev';
-import ContactSection from './sections/contact_me/contact_me'; 
+import ContactSection from './sections/contact_me/contact_me';
 
 export default function HomePage() {
   
@@ -25,6 +26,8 @@ export default function HomePage() {
       <CoverPage />
 
       <AboutMe />
+
+      <Timeline />
 
       <MobileDev />
 

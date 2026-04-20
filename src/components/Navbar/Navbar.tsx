@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import NavItem, { NavItemProps } from './NavItem';
 
 import github_logo from '@png_assets/svg_personal_github.png';
+import timeline_logo from '@png_assets/svg_topography.png';
 import mobile_logo from '@png_assets/navbar/svg_mobile_icon.png';
 import web_logo from '@png_assets/navbar/svg_web_icon.png';
 import contact_logo from '@png_assets/navbar/svg_contact_me_icon.png';
@@ -35,6 +36,7 @@ const Navbar: React.FC = () => {
 
   const navItems: NavItemData[] = [
     { id: 'about', href: '#about', text: t('about_me'), icon: github_logo },
+    { id: 'timeline', href: '#timeline', text: t('timeline_section'), icon: timeline_logo },
     { id: 'mobile', href: '#mobile', text: t('mobile_section'), icon: mobile_logo },
     { id: 'web', href: '#web', text: t('web_section'), icon: web_logo },
     { id: 'contact', href: '#contact', text: t('contact_me'), icon: contact_logo }
@@ -42,8 +44,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-primary shadow text-white_primary text-center">
-      <div className=" h-full flex flex-col py-10 justify-between items-center">
-        <div className='w-full flex flex-col justify-items-start text-lg  -mx-2 '>
+      <div className="h-full flex flex-col justify-center items-center gap-10 py-10">
+        <div className='w-full flex flex-col justify-items-start text-lg -mx-2'>
           <ReactMarkdown
             components={{
               p: ({ children }) => <span>{children}</span>,
@@ -53,7 +55,7 @@ const Navbar: React.FC = () => {
           </ReactMarkdown>
         </div>
 
-        <div className="flex flex-col gap-8 items-center text-center w-full px-2 p ">
+        <div className="flex flex-col gap-6 items-center text-center w-full px-2">
           {navItems.map((item) => (
             <NavItem
               key={item.id}
@@ -66,7 +68,7 @@ const Navbar: React.FC = () => {
 
         <button
           onClick={handleLanguageChange}
-          className="px-8 py-1 rounded flex bg-white_primary  hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
+          className="px-8 py-1 rounded flex bg-white_primary hover:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-300"
         >
           <Image
             src={locale === 'es' ? english_flag : spanish_flag}
@@ -75,7 +77,6 @@ const Navbar: React.FC = () => {
             height={30}
             className="transition-transform hover:rotate-3"
           />
-
         </button>
       </div>
     </nav>

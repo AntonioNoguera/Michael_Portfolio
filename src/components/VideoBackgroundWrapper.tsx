@@ -42,7 +42,7 @@ export default function VideoBackgroundWrapper({ children }: Props) {
                     playsInline
                     onLoadedData={handleVideoLoaded}
                 >
-                    <source src="/mp4/pattern.mp4" type="video/mp4" />
+                    <source src="/portfolio/mp4/pattern.mp4" type="video/mp4" />
                     Tu navegador no soporta el video.
                 </video>
             </div>
