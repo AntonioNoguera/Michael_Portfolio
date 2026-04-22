@@ -65,7 +65,7 @@ export default function TimelineAppModal({ app, onClose }: TimelineAppModalProps
                         animate="visible"
                         exit="exit"
                         transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-                        className="relative bg-white_primary text-primary rounded-3xl shadow-std w-full max-w-xl max-h-[85vh] overflow-y-auto"
+                        className="relative bg-white_primary text-primary rounded-3xl shadow-std w-full max-w-3xl max-h-[85vh] overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
@@ -76,31 +76,20 @@ export default function TimelineAppModal({ app, onClose }: TimelineAppModalProps
                             ×
                         </button>
 
-                        {app.coverImage && (
-                            <div className="relative w-full aspect-[16/9] bg-secondary overflow-hidden">
-                                <Image
-                                    src={app.coverImage}
-                                    alt={t(app.nameKey)}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 640px) 100vw, 576px"
-                                />
-                            </div>
-                        )}
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-6 sm:p-7">
+                            <div className="flex flex-row md:flex-col gap-5 md:gap-0 items-start md:items-stretch flex-1 min-w-0">
+                                <div className="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-2xl bg-white shadow-std overflow-hidden flex items-center justify-center md:mb-5">
+                                    <Image
+                                        src={app.icon}
+                                        alt={t(app.nameKey)}
+                                        width={128}
+                                        height={128}
+                                        className="object-contain w-full h-full p-2"
+                                    />
+                                </div>
 
-                        <div className="flex flex-col sm:flex-row gap-5 p-6 sm:p-7">
-                            <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 mx-auto sm:mx-0 rounded-2xl bg-white shadow-std overflow-hidden flex items-center justify-center">
-                                <Image
-                                    src={app.icon}
-                                    alt={t(app.nameKey)}
-                                    width={128}
-                                    height={128}
-                                    className="object-contain w-full h-full p-2"
-                                />
-                            </div>
-
-                            <motion.div
-                                className="flex-1 min-w-0"
+                                <motion.div
+                                    className="flex-1 min-w-0 md:w-full"
                                 initial="hidden"
                                 animate="visible"
                                 transition={{ staggerChildren: 0.08, delayChildren: 0.15 }}
@@ -187,7 +176,22 @@ export default function TimelineAppModal({ app, onClose }: TimelineAppModalProps
                                         })}
                                     </motion.div>
                                 )}
-                            </motion.div>
+                                </motion.div>
+                            </div>
+
+                            <div className="shrink-0 mx-auto md:mx-0 self-center">
+                                <div className="relative aspect-[9/19.5] w-[180px] bg-black_primary/10 rounded-[2rem] overflow-hidden ring-[6px] ring-black_primary/80 shadow-std">
+                                    {app.coverImage && (
+                                        <Image
+                                            src={app.coverImage}
+                                            alt={t(app.nameKey)}
+                                            fill
+                                            className="object-cover"
+                                            sizes="180px"
+                                        />
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>

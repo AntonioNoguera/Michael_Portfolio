@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 const LoadingOverlay = ({ loading }: { loading: boolean }) => {
     return (
         <div
-            className={`fixed inset-0 bg-primary z-50 text-2xl text-white_primary items-center justify-center flex flex-col gap-3 transition-opacity duration-1000 ${loading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            className={`fixed inset-0 bg-primary z-[110] text-2xl text-white_primary items-center justify-center flex flex-col gap-3 transition-opacity duration-1000 ${loading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                 }`}
         >
             <ReactMarkdown

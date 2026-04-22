@@ -50,9 +50,9 @@ export default function Lockscreen() {
             {!isUnlocked && (
                 <motion.div
                     key="lockscreen"
-                    initial={{ y: 0, opacity: 1 }}
-                    exit={{ y: '-100%', opacity: 0 }}
-                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                    initial={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeInOut' }}
                     onClick={unlock}
                     onKeyDown={unlock}
                     tabIndex={0}

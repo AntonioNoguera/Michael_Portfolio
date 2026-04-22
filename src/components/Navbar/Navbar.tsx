@@ -3,12 +3,9 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
 import NavItem, { NavItemProps } from './NavItem';
-import { useLockscreen } from '@/contexts/LockscreenContext';
 
 import github_logo from '@png_assets/svg_personal_github.png';
-import timeline_logo from '@png_assets/svg_topography.png';
 import mobile_logo from '@png_assets/navbar/svg_mobile_icon.png';
 import web_logo from '@png_assets/navbar/svg_web_icon.png';
 import contact_logo from '@png_assets/navbar/svg_contact_me_icon.png';
@@ -28,7 +25,6 @@ const Navbar: React.FC = () => {
   const t = useTranslations('Navbar');
   const locale = useLocale();
   const router = useRouter();
-  const { isUnlocked } = useLockscreen();
 
   const handleLanguageChange = (): void => {
     const newLocale = locale === 'es' ? 'en' : 'es';
@@ -39,19 +35,13 @@ const Navbar: React.FC = () => {
 
   const navItems: NavItemData[] = [
     { id: 'about', href: '#about', text: t('about_me'), icon: github_logo },
-    { id: 'timeline', href: '#timeline', text: t('timeline_section'), icon: timeline_logo },
-    { id: 'mobile', href: '#mobile', text: t('mobile_section'), icon: mobile_logo },
+    { id: 'timeline', href: '#timeline', text: t('mobile_section'), icon: mobile_logo },
     { id: 'web', href: '#web', text: t('web_section'), icon: web_logo },
     { id: 'contact', href: '#contact', text: t('contact_me'), icon: contact_logo }
   ];
 
   return (
-    <motion.div
-      initial={{ x: '-100%' }}
-      animate={{ x: isUnlocked ? 0 : '-100%' }}
-      transition={{ type: 'spring', stiffness: 120, damping: 20, delay: isUnlocked ? 0.4 : 0 }}
-    >
-      <nav className="bg-primary shadow text-white_primary text-center h-full flex flex-col justify-center items-center gap-10 py-10">
+    <nav className="bg-primary shadow text-white_primary text-center h-screen flex flex-col justify-between items-center py-10">
         <div className='w-full flex flex-col justify-items-start text-lg -mx-2'>
           <ReactMarkdown
             components={{
@@ -86,7 +76,6 @@ const Navbar: React.FC = () => {
           />
         </button>
       </nav>
-    </motion.div>
   );
 }
 

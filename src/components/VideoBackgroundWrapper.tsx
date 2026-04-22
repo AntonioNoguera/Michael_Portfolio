@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react'; 
+import { useState, useEffect, useRef } from 'react';
 import LoadingOverlay from './LoadingOverlay';
- 
+
 
 type Props = {
     children: React.ReactNode;

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { Raleway } from 'next/font/google'
+import type { Metadata } from 'next';
 
 import Navbar from '@/components/Navbar/Navbar';
 
@@ -17,6 +18,10 @@ const raleway = Raleway({
     variable: '--font-raleway',
     weight: ['400', '700'],
 })
+
+export const metadata: Metadata = {
+    title: 'Michael Portfolio',
+};
 
 type Props = {
     children: ReactNode;
@@ -35,9 +40,6 @@ export default async function LocaleLayout({ children, params }: Props) {
 
     return (
         <html className="h-full" lang={locale}>
-            <head>
-                <title>Michael Portfolio</title>
-            </head>
             <body className={`${raleway.variable} font-sans`}>
                 <div className='flex'>
                     <NextIntlClientProvider locale={locale} messages={messages}>
