@@ -140,7 +140,7 @@ export default function Timeline() {
             id="timeline"
             className="h-screen snap-start flex flex-col items-center relative overflow-hidden bg-secondary text-primary"
         >
-            <div className="absolute top-0 left-0 right-0 pt-10 md:pt-12 flex flex-col items-center z-10 gap-3 pointer-events-none">
+            <div className="shrink-0 w-full pt-10 md:pt-12 flex flex-col items-center z-10 gap-3 pointer-events-none">
                 <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center text-black_primary tracking-tight px-4">
                     {t('title').replace(/\n/g, ' ')}
                 </h2>
@@ -158,7 +158,7 @@ export default function Timeline() {
                 onPointerCancel={onPointerUp}
                 onClickCapture={onClickCapture}
                 onWheel={onWheel}
-                className={`w-full h-full overflow-x-auto overflow-y-visible select-none flex items-center ${grabbing ? 'cursor-grabbing' : 'cursor-grab'}`}
+                className={`w-full flex-1 min-h-0 overflow-x-auto overflow-y-visible select-none flex items-center ${grabbing ? 'cursor-grabbing' : 'cursor-grab'}`}
             >
                 <div className="relative px-6 py-10 min-w-max mx-auto">
                     <div
