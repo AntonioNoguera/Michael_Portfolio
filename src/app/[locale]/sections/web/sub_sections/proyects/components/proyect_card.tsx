@@ -4,7 +4,6 @@ import Link from 'next/link'
 import UsedTecnologyItem from './used_technology_item';
 
 import github_logo from '@png_assets/github.png';
-import "keen-slider/keen-slider.min.css";
 
 import Image from 'next/image';
 
@@ -23,7 +22,7 @@ export default function ProjectCard({ proyect, progressData }: ProyectCardProps)
   return (
     <div className='px-20'>
 
-      <div className="flex flex-row gap-6 w-full rounded-2xl p-4 bg-white shadow keen-slider__slide">
+      <div className="flex flex-row gap-6 w-full rounded-2xl p-4 bg-white shadow">
 
         <div className='w-[55%] h-auto flex rounded-md relative'>
           <Image

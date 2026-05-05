@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 
-import { AnimatePresence } from "motion/react"
-import * as motion from "motion/react-client"
+import { AnimatePresence, motion } from "framer-motion"
 
 import TecnicalTab from "./tecnical_knowledge/tecnical_tab"
 import ProyectTab from "./proyects/proyect_tab"
